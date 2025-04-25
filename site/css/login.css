@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+:root {
+	--amarelo-claro: #ffc933;
+	--branco: #c7b489;
+	--marrom: #533527;
+	--marrom-claro: #945031;
+	--beje: #c7b489;
+	--marrom-escuro: #1d110b;
+
+}
+
+header {
+	background-color: var(--marrom-escuro);
+}
+
+.container {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+ul {
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	list-style: none;
+	gap: 5rem;
+
+}
+
+header img {	
+	width: 4rem;
+	cursor: pointer;
+}
+
+li a {
+	font-size: 18px;
+	text-decoration: none;
+	color: var(--beje);
+	cursor: pointer;
+	position: relative;
+}
+
+li a::before { /*pseudoelemento*/
+	content: '';
+	background-color: var(--amarelo-claro);
+	width: 0; 
+	height: 0;
+	bottom: 0;
+	position: absolute;
+	transform: translate(0%, 60%); 
+	transition: width .2s, height .2s; 
+
+}
+
+li a:hover::before {
+	height: 2px;
+	width: 100%;	
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 6rem;
+	color: var(--beje);
+	background-color: var(--marrom-escuro);
+	
+}
+
+footer .direita{	
+	flex-direction: column;
+	gap: 0.1rem;
+	text-align: center;
+}
+
+.direita h3 {
+	font-weight: 600;
+	font-size: 25px;
+}
+
+.made {
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.background {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 90vh;
+	background-image: url(../img/brickwall.webp);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #110b08a2;
+	height: fit-content;
+	padding: 1rem;
+	width: 25rem;
+	border-radius: 10px;
+	gap: 0.6rem;
+	color: var(--branco);
+}
+
+.form h2 {
+	margin-bottom: 1rem;
+	font-size: 40px;
+	font-weight: 600;
+}
+
+.form button {
+	font-size: 20px;
+	padding: 10px 20px;
+	width: 8rem;
+	border-radius: 5px;
+	border: none;
+	background-color: var(--amarelo-claro);
+	cursor: pointer;
+}
+
+.form button:hover {
+	background-color: #fa702ba2;
+	transition: 0.5s;
+}
+
+.form label {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.form input {
+	width: 80%;
+	background-color: var(--cinza-escuro);
+	color: var(--branco);
+	border-radius: 15px;
+	height: 1.8rem;
+	padding: 5px;
+	text-align: center;
+	font-size: 16px;
+}
+.form input::placeholder {
+	color: var(--cinza-claro);
+}
+
+.form input:hover {
+	border-color: var(--amarelo-claro);
+	transition: 0.5s;
+}
