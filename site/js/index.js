@@ -1,6 +1,6 @@
 var btn = document.querySelector('.btn'); //pegar a classe que atribui para o link botão
 
-btn.onmousemove = function(e){
+btn.onmousemove = function (e) {
 	var x = e.pageX - btn.offsetLeft; // guardar a posição do mouse eixo x horizontal
 	var y = e.pageY - btn.offsetTop; // guardar a posição do mouse eixo y vertical
 

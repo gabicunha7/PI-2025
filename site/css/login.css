@@ -8,7 +8,7 @@
 
 :root {
 	--amarelo-claro: #ffc933;
-	--branco: #c7b489;
+	--branco: #fff;
 	--marrom: #533527;
 	--marrom-claro: #945031;
 	--beje: #c7b489;
@@ -72,15 +72,16 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-	height: 6rem;
+	height: 8rem;
 	color: var(--beje);
 	background-color: var(--marrom-escuro);
 	
 }
 
 footer .direita{	
+	display: flex;
 	flex-direction: column;
-	gap: 0.1rem;
+	gap: 0.5rem;
 	text-align: center;
 }
 
@@ -99,7 +100,7 @@ footer .direita{
 	justify-content: space-around;
 	align-items: center;
 	height: 90vh;
-	background-image: url(../img/brickwall.webp);
+	background-image: url(../img/sadbrick.PNG);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -125,6 +126,10 @@ footer .direita{
 	font-weight: 600;
 }
 
+.form a {
+	color: var(--amarelo-claro);
+}
+
 .form button {
 	font-size: 20px;
 	padding: 10px 20px;
@@ -147,16 +152,14 @@ footer .direita{
 
 .form input {
 	width: 80%;
-	background-color: var(--cinza-escuro);
+	background-color: #110b08a2;
+	border: solid 2px var(--marrom);
 	color: var(--branco);
 	border-radius: 15px;
 	height: 1.8rem;
 	padding: 5px;
 	text-align: center;
 	font-size: 16px;
-}
-.form input::placeholder {
-	color: var(--cinza-claro);
 }
 
 .form input:hover {
