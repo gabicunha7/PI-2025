@@ -1,3 +1,3 @@
 document.getElementById("entrar").onclick = function () {
-        location.href = "../paginas/bemvindo.htm";
+        location.href = "../paginas/bemvindo.html";
 };

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+:root {
+	--amarelo-claro: #ffc933;
+	--branco: #fff;
+	--marrom: #533527;
+	--marrom-claro: #945031;
+	--beje: #c7b489;
+	--marrom-escuro: #1d110b;
+
+}
+
+header {
+	background-color: var(--marrom-escuro);
+}
+
+.container {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+ul {
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	list-style: none;
+	gap: 5rem;
+
+}
+
+header img {	
+	width: 4rem;
+	cursor: pointer;
+}
+
+li a {
+	font-size: 18px;
+	text-decoration: none;
+	color: var(--beje);
+	cursor: pointer;
+	position: relative;
+}
+
+li a::before { /*pseudoelemento*/
+	content: '';
+	background-color: var(--amarelo-claro);
+	width: 0; 
+	height: 0;
+	bottom: 0;
+	position: absolute;
+	transform: translate(0%, 60%); 
+	transition: width .2s, height .2s; 
+
+}
+
+li a:hover::before {
+	height: 2px;
+	width: 100%;	
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 8rem;
+	color: var(--beje);
+	background-color: var(--marrom-escuro);
+	
+}
+
+footer .direita{	
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	text-align: center;
+}
+
+.direita h3 {
+	font-weight: 600;
+	font-size: 25px;
+}
+
+.made {
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.background {
+	display: flex;
+	flex-direction: column;
+	height: 80vh;
+	width: 100%;
+	background-image: url(../img/sadwood.PNG);
+
+}
+
+.background .bemvindo {
+	margin-top: 4rem;
+	margin-bottom: 6rem;
+	height: fit-content;
+	width: 100%;
+	text-align: center;
+	color: #c7b489;
+}
+
+.bemvindo h1 {
+	font-size: 30px;
+}
+
+.cards {
+	color: var(--beje);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card a {
+	text-align: center;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	width: 20rem;
+	background-color: #110b08a2;
+	border-radius: 40px;
+	text-decoration: none;
+	border: ridge 3px var(--beje);
+	color: var(--beje);
+	transition: 0.5s;
+}
+
+.card a:hover {
+	transform: scale(1, 1.1);
+	background-color: #1f0e06a2;
+}
+
