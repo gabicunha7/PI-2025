@@ -11,7 +11,7 @@
 	--branco: #fff;
 	--marrom: #533527;
 	--marrom-claro: #945031;
-	--beje: #c7b489;
+	--beje: #eac197;
 	--marrom-escuro: #1d110b;
 
 }
@@ -98,10 +98,11 @@ footer .direita{
 .form {
 	height: 90vh;
 	width: 100%;
-	background-image: url(../img/pesquisa.jpg);
+	/* background-image: url(../img/pesquisa.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover; */
+	background-color: var(--beje);
 }
 
 .pesquisa {
