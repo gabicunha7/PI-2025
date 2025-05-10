@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+:root {
+	--azul-escuro: #000B58;
+	--branco: #fff;
+	--amarelo-claro: #FFF4B7;
+	--verde: #006A67;
+	--azul: #003161;
+	--laranja: #c1531b;
+
+}
+
+header {
+	background-color: var(--amarelo-claro);
+}
+
+.container {
+	width: 90%;
+	height: 6.5rem;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+ul {
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	list-style: none;
+	gap: 5rem;
+
+}
+
+header img {	
+	width: 4rem;
+	cursor: pointer;
+}
+
+li a {
+	font-size: 18px;
+	text-decoration: none;
+	color: var(--azul-escuro);
+	cursor: pointer;
+	position: relative;
+}
+
+li a::before { /*pseudoelemento*/
+	content: '';
+	background-color: var(--laranja);
+	width: 0; 
+	height: 0;
+	bottom: 0;
+	position: absolute;
+	transform: translate(0%, 60%); 
+	transition: width .2s, height .2s; 
+
+}
+
+li a:hover::before {
+	height: 2px;
+	width: 100%;	
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 10rem;
+	color: var(--azul-escuro);
+	background-color: var(--amarelo-claro);
+	
+}
+
+footer .direita{	
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	text-align: center;
+}
+
+.made {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	font-weight: 700;
+	gap: 0.5rem;
+	font-size: 20px;
+}
+
+.made img{
+	width: 2rem;
+}
+
+.links{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	gap: 0.5rem;
+}
+
+.links a{
+	text-decoration: underline;
+	color: var(--azul-escuro);
+}
