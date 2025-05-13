@@ -1,21 +1,40 @@
+:root {
+	--azul-escuro: #000B58;
+	--branco: #fff;
+	--amarelo-claro: #FFF4B7;
+	--verde: #006A67;
+	--azul: #003161;
+	--laranja: #c1531b;
+	--amarelo-escuro: #f8bf2d;
+
+}
 
 
 .background {
 	display: flex;
 	flex-direction: column;
-	height: 80vh;
+	height: fit-content;
 	width: 100%;
-	background-image: url(../img/sadwood.PNG);
+	background-color: var(--verde);
 
 }
 
 .background .bemvindo {
 	margin-top: 4rem;
-	margin-bottom: 6rem;
-	height: fit-content;
+	margin-bottom: 4rem;
 	width: 100%;
 	text-align: center;
-	color: #c7b489;
+	color: var(--amarelo-claro);
+}
+
+.content {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.imagem img{
+	width: 100%;
 }
 
 .bemvindo h1 {
@@ -23,33 +42,38 @@
 }
 
 .cards {
-	color: var(--beje);
+	color: var(--amarelo-claro);
 	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
+	flex-direction: column;
+	gap: 1rem;
+	margin-left: 4rem;
+	margin-bottom: 4rem;
+	width: 50%;
 }
+
 .card {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: start;
+	width: 70%;
 }
 
 .card a {
 	text-align: center;
-	padding-top: 5rem;
-	padding-bottom: 5rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	width: 20rem;
-	background-color: #110b08a2;
+	background-color: #000a5881;
 	border-radius: 40px;
 	text-decoration: none;
-	border: ridge 3px var(--beje);
+	border: ridge 3px var(--amarelo-claro);
 	color: var(--beje);
 	transition: 0.5s;
 }
 
+
 .card a:hover {
 	transform: scale(1, 1.1);
-	background-color: #1f0e06a2;
+	background-color: #c1521b5d;
 }
 
 .card a svg {

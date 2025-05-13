@@ -39,10 +39,10 @@ function listarPorUsuario(req, res) {
         );
 }
 
-function pesquisarDescricao(req, res) {
+function pesquisar_traducaoDescricao(req, res) {
     var descricao = req.params.descricao;
 
-    avisoModel.pesquisarDescricao(descricao)
+    avisoModel.pesquisar_traducaoDescricao(descricao)
         .then(
             function (resultado) {
                 if (resultado.length > 0) {
@@ -129,7 +129,7 @@ function deletar(req, res) {
 module.exports = {
     listar,
     listarPorUsuario,
-    pesquisarDescricao,
+    pesquisar_traducaoDescricao,
     publicar,
     editar,
     deletar

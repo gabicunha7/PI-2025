@@ -14,6 +14,7 @@ nome varchar(45),
 artista varchar(45),
 letra mediumtext,
 genero varchar(45),
+idioma varchar(45),
 fkusuario int,
 constraint fk_usuario_musica foreign key(fkusuario) references usuario(id)
 )auto_increment = 100;
@@ -45,7 +46,7 @@ values		('Ronaldo', 'ronaldo@gmail.com', 'senha1'),
 			('Pedro', 'pedro@gmail.com', 'senha4'),
 			('João', 'joao@email.com', 'senha5');
             
-insert into musica (nome, artista, letra, genero, fkusuario) 
+insert into musica (nome, artista, letra, genero, fkusuario, idioma) 
 values		('Tom Sawyer', 'Rush', 'A modern-day warrior\n
 			Mean, mean stride\n
 			Today\'s Tom Sawyer\n
@@ -81,7 +82,7 @@ values		('Tom Sawyer', 'Rush', 'A modern-day warrior\n
 			He gets high on you\n
 			And the energy you trade\n
 			He gets right on to\n
-			The friction of the day\n', 'Rock', 1),
+			The friction of the day\n', 'Rock', 1, 'English'),
 			('Lover, You Should’ve Come Over', 'Jeff Buckley', 'Looking out the door I see the rain\n
 			Fall upon the funeral mourners\n
 			Parading in a wake of sad relations\n
@@ -134,7 +135,7 @@ values		('Tom Sawyer', 'Rush', 'A modern-day warrior\n
 			Lover, lover, lover\n
 			Lover, love, love, love, love, love, love!\n
 			Lover, you should\'ve come over\n
-			\'Cause it\'s not too late\n', 'Alternativo', 4),
+			\'Cause it\'s not too late\n', 'Alternativo', 4, 'English'),
 			('Wuthering Heights', 'Kate Bush', 'Out on the wily, windy moors
 			We\'d roll and fall in green
 			You had a temper like my jealousy
@@ -180,7 +181,7 @@ values		('Tom Sawyer', 'Rush', 'A modern-day warrior\n
 			I\'ve come home, I\'m so cold
 			Let me in your window
 			Heathcliff, it\'s me, I\'m Cathy
-			I\'ve come home, I\'m so cold', 'Pop', 2);
+			I\'ve come home, I\'m so cold', 'Pop', 2, 'English');
             
 insert into traducao (fkmusica, fkusuario, letra) 
 values		(100, 1, 'Um guerreiro dos dias modernos

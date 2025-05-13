@@ -97,22 +97,25 @@
 	height: max-content;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .itens {
 	width: 90%;
-	height: 50vh;
+	height: 70vh;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	margin-top: 4rem;
+	align-items: flex-start;
 	color: var(--azul-escuro);
 }
 
-.itens h1{
+.item h1{
 	margin-left: 3rem;
 	font-size: 50px;
 }
 
-.itens ul {
+.item ul {
 	margin-left: 3rem;
 	display: flex;
 	font-size: 20px;
@@ -127,9 +130,8 @@
 
 .imagem_clave img {
 	margin-top: 10rem;
-	width: 5rem;
+	width: 10rem;
 }
-
 
 .sobre {
 	display: flex;
@@ -137,7 +139,7 @@
 	align-items: center;
 	text-align: center;
 	height: 50vh;
-	background-color: var(--verde);
+	background-color: var(--azul);
 }
 
 .sobre .texto {

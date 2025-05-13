@@ -1,10 +1,20 @@
+:root {
+	--azul-escuro: #000B58;
+	--branco: #fff;
+	--amarelo-claro: #FFF4B7;
+	--verde: #006A67;
+	--azul: #003161;
+	--laranja: #c1531b;
+	--amarelo-escuro: #f8bf2d;
+
+}
 
 .background {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	height: 90vh;
-	background-image: url(../img/piano.jfif);
+	background-image: url(../img/piano.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -15,7 +25,7 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: #110b08a2;
+	background-color: #000a5881;
 	height: fit-content;
 	padding: 1rem;
 	width: 25rem;
@@ -41,7 +51,7 @@
 }
 
 .form button:hover {
-	background-color: #fa702ba2;
+	background-color: #f8bf2da9;
 	transition: 0.5s;
 }
 
@@ -60,6 +70,7 @@
 	padding: 5px;
 	text-align: center;
 	font-size: 16px;
+	outline: none;
 }
 
 .form input:hover {
@@ -72,7 +83,7 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: #110b08a2;
+	background-color: #000a58a3;
 	height: fit-content;
 	padding: 1rem;
 	width: 25rem;
@@ -82,7 +93,7 @@
 }
 
 .contato p {
-	font-size: 12px;
+	font-size: 15px;
 }
 
 .contato h1 {

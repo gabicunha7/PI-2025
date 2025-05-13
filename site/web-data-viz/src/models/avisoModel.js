@@ -20,8 +20,8 @@ function listar() {
     return database.executar(instrucaoSql);
 }
 
-function pesquisarDescricao(texto) {
-    console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function pesquisarDescricao()");
+function pesquisar_traducaoDescricao(texto) {
+    console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function pesquisar_traducaoDescricao()");
     var instrucaoSql = `
         SELECT 
             a.id AS idAviso,
@@ -92,7 +92,7 @@ function deletar(idAviso) {
 module.exports = {
     listar,
     listarPorUsuario,
-    pesquisarDescricao,
+    pesquisar_traducaoDescricao,
     publicar,
     editar,
     deletar

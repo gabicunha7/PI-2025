@@ -1,7 +1,16 @@
+:root {
+	--azul-escuro: #000B58;
+	--branco: #fff;
+	--amarelo-claro: #FFF4B7;
+	--verde: #006A67;
+	--azul: #003161;
+	--laranja: #c1531b;
+	--amarelo-escuro: #f8bf2d;
 
+}
 
 body {
-	background-color: var(--beje);
+	background-color: var(--branco);
 }
 
 .conteudo {
@@ -11,6 +20,7 @@ body {
 }
 
 .original {
+	color: var(--azul);
 	font-size: 20px;
 	flex: 0 0 50%;             
 	text-align: center;         
@@ -19,6 +29,7 @@ body {
 	background-color: #1d110b23;
 }
 .traducao {
+	color: var(--azul);
 	font-size: 20px;
 	flex: 0 0 50%;             
 	text-align: center;         
@@ -37,12 +48,12 @@ body {
 
 .infos h1 {
 	font-size: 3rem;
-	color: var(--marrom-escuro);
+	color: var(--amarelo-escuro);
 	font-weight: 800;
 }
 
 .infos p {
-	color: var(--marrom-escuro);
+	color: var(--azul);
 	font-size: 20px;
 }
 
@@ -63,7 +74,7 @@ body {
 .star-icon {
 	list-style-type: none;
 	cursor: pointer;
-	color: var(--amarelo-claro);
+	color: var(--amarelo-escuro);
 }
 
 .star-icon::before {
@@ -91,22 +102,23 @@ body {
 	text-align: center;
 	border-radius: 5px;
 	border: none;
-	color: var(--marrom-escuro);
-	background-color: #fff1d0;
+	color: var(--amarelo-claro);
+	background-color: var(--azul);
 }
 
 .ipt_comentario::placeholder{
-	color: var(--marrom-escuro);
+	color: var(--amarelo-claro);
 }
 
 .comentario button {
-	background-color: var(--amarelo-claro);
+	color: var(--amarelo-claro);
 	border: none;
 	font-size: 20px;
 	padding: 10px 20px;
 	width: 8rem;
 	border-radius: 5px;
 	cursor: pointer;
+	background-color: var(--azul);
 }
 
 .comentario button:hover {
