@@ -9,6 +9,11 @@
 
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 .inicio {
 	/* background-image: url(../site/img/violao.png);
 	background-position: center;
