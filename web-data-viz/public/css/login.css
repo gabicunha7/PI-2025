@@ -87,7 +87,12 @@ color: var(--amarelo-escuro);
 /*web dat viz*/
 
 .loading-div {
-	width: 50px;
+	width: 100%;
+	height: 100%;
+	background-color: #000a581f;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin: auto;
 	display: none;
       }

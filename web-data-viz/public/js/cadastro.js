@@ -8,12 +8,14 @@
     var nomeVar = ipt_nome.value;
     var emailVar = ipt_email.value;
     var senhaVar = ipt_senha.value;
+    var MusGostoVar = sel_gosto_musical.value;
 
     // Verificando se há algum campo em branco
     if (
       nomeVar == "" ||
       emailVar == "" ||
-      senhaVar == "" 
+      senhaVar == "" ||
+      MusGostoVar == "" 
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
@@ -49,7 +51,8 @@
         // Agora vá para o arquivo routes/usuario.js
         nomeServer: nomeVar,
         emailServer: emailVar,
-        senhaServer: senhaVar
+        senhaServer: senhaVar,
+        MusGostoServer: MusGostoVar
       }),
     })
       .then(function (resposta) {

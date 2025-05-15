@@ -13,7 +13,8 @@ create table usuario (
 id int primary key auto_increment,
 nome varchar(45) not null,
 email varchar(60) not null,
-senha varchar(45) not null
+senha varchar(45) not null,
+genfav varchar(45) not null
 );
 
 create table musica (
@@ -44,12 +45,12 @@ constraint fk_traducao foreign key(fktraducao) references traducao(id),
 constraint fk_usuario_comentario foreign key(fkusuario) references usuario(id)
 )auto_increment = 100;
 
-insert into usuario (nome, email, senha) 
-values		('Ronaldo', 'ronaldo@gmail.com', 'senha1'),
-			('Carlos', 'carlos@email.com', 'senha2'),
-			('Julia', 'julia@gmail.com', 'senha3'),
-			('Pedro', 'pedro@gmail.com', 'senha4'),
-			('João', 'joao@email.com', 'senha5');
+insert into usuario (nome, email, senha, genfav) 
+values		('Ronaldo', 'ronaldo@gmail.com', 'senha1', 'Rock'),
+			('Carlos', 'carlos@email.com', 'senha2', 'Pop'),
+			('Julia', 'julia@gmail.com', 'senha3', 'Rock'),
+			('Pedro', 'pedro@gmail.com', 'senha4', 'Funk'),
+			('João', 'joao@email.com', 'senha5', 'Indie');
             
 insert into musica (nome, artista, letra, genero, idioma) 
 values		('Tom Sawyer', 'Rush', 'A modern-day warrior\n
