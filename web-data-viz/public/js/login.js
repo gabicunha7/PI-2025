@@ -39,7 +39,7 @@ function entrar() {
 				sessionStorage.ID_USUARIO = json.id;
 				sessionStorage.NOME_USUARIO = json.nome;
 				sessionStorage.EMAIL_USUARIO = json.email;
-				sessionStorage.FAVORITO_USUARIO = json.genfav;
+				sessionStorage.FAVORITO_USUARIO = json.genFav;
 				sessionStorage.MUSICAS = JSON.stringify(json.musicas)
 
 				setTimeout(function () {

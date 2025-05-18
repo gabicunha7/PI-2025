@@ -21,7 +21,7 @@
 			<nav class="navbar">
 				<ul>
 					<li><a href="../paginas/alta.html">Em alta</a></li>
-					<li class="login"><a href="login.html">Login</a></li>
+					<li class="login"><a href="../paginas/login.html">Login</a></li>
 				</ul>
 			</nav>
 		</section>
@@ -31,7 +31,7 @@
 		<section class="background">
 
 			<aside class="contato">
-
+				
 				<h1>Contato</h1>
 				<h2><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
 						class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
@@ -57,11 +57,6 @@
 			</aside>
 
 			<section class="form">
-				<div class="alerta_erro">
-					<div class="card_erro" id="cardErro">
-						<span id="mensagem_erro"></span>
-					</div>
-				</div>
 
 				<h2>Cadastro</h2>
 
@@ -84,9 +79,14 @@
 					<option value="Eletrônica">Eletrônica</option>
 					<option value="Jazz">Jazz</option>
 				</select>
-
+				
 				<button id="criar_conta" onclick="cadastrar()">Criar</button>
-
+				
+				<div class="alerta_erro">
+					<div class="card_erro" id="cardErro">
+						<span id="mensagem_erro"></span>
+					</div>
+				</div>
 				<div id="div_aguardar" class="loading-div">
 					<img src="./assets/circle-loading.gif" id="loading-gif" />
 				</div>
@@ -125,7 +125,7 @@
 		<div class="links">
 			<h2>Links</h2>
 			<a href="paginas/alta.html">Em alta</a>
-			<a href="./dashboard/pesquisar.html">Traduções</a>
+			<a href="paginas/pesquisar.html">Traduções</a>
 			<a href="login.html">Login</a>
 			<a href="cadastro.html">Cadastro</a>
 		</div>

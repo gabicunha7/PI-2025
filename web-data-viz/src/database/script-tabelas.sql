@@ -88,7 +88,7 @@ values		('Tom Sawyer', 'Rush', 'A modern-day warrior\n
 			He gets high on you\n
 			And the energy you trade\n
 			He gets right on to\n
-			The friction of the day\n', 'Rock', 'English'),
+			The friction of the day\n', 'Rock', 'Inglês'),
 			('Lover, You Should’ve Come Over', 'Jeff Buckley', 'Looking out the door I see the rain\n
 			Fall upon the funeral mourners\n
 			Parading in a wake of sad relations\n
@@ -141,7 +141,7 @@ values		('Tom Sawyer', 'Rush', 'A modern-day warrior\n
 			Lover, lover, lover\n
 			Lover, love, love, love, love, love, love!\n
 			Lover, you should\'ve come over\n
-			\'Cause it\'s not too late\n', 'Alternativo', 'English'),
+			\'Cause it\'s not too late\n', 'Alternativo', 'Inglês'),
 			('Wuthering Heights', 'Kate Bush', 'Out on the wily, windy moors
 			We\'d roll and fall in green
 			You had a temper like my jealousy
@@ -187,7 +187,120 @@ values		('Tom Sawyer', 'Rush', 'A modern-day warrior\n
 			I\'ve come home, I\'m so cold
 			Let me in your window
 			Heathcliff, it\'s me, I\'m Cathy
-			I\'ve come home, I\'m so cold', 'Pop', 'English');
+			I\'ve come home, I\'m so cold', 'Pop', 'Inglês'),
+			('Papaoutai', 'Stromae',
+			'Dites-moi d\'où il vient
+			Enfin je saurai où je vais
+			Maman dit que lorsqu\'on cherche bien
+			On finit toujours par trouver
+			Elle dit qu\'il n\'est jamais très loin
+			Qu\'il part très souvent travailler
+			Maman dit "travailler, c\'est bien"
+			Bien mieux qu\'être mal accompagné
+			Pas vrai?
+			Où est ton papa?
+			Dis-moi, où est ton papa?
+			Sans même devoir lui parler
+			Il sait ce qui ne va pas
+			Ah, sacré papa
+			Dis-moi, où es-tu caché?
+			Ça doit faire au moins mille fois que j\'ai
+			Compté mes doigts
+			Hey
+			Où t\'es, papaoutai?
+			Où t\'es, papaoutai?
+			Où t\'es, papaoutai?
+			Où t\'es, où t\'es où, papaoutai?
+			Où t\'es, papaoutai?
+			Où t\'es, papaoutai?
+			Où t\'es, papaoutai?
+			Où t\'es, où t\'es où, papaoutai?
+			Quoi? Qu\'on y croie ou pas
+			Y aura bien un jour où on n\'y croira plus
+			Un jour ou l\'autre, on sera tous papas
+			Et d\'un jour à l\'autre, on aura disparu
+			Serons-nous détestables?
+			Serons-nous admirables?
+			Des géniteurs ou des génies?
+			Dites-nous qui donne naissance aux irresponsables?
+			Ah, dites-nous qui?
+			Tiens, tout le monde sait comment on fait des bébés
+			Mais personne sait comment on fait des papas
+			Monsieur je-sais-tout en aurait hérité, c\'est ça
+			Faut l\'sucer d\'son pouce ou quoi?
+			Dites-nous où c\'est caché, ça doit
+			Faire au moins mille fois qu\'on a
+			Bouffé nos doigts
+			Hey
+			Où t\'es, papaoutai?
+			Où t\'es, papaoutai?
+			Où t\'es, papaoutai?
+			Où t\'es, où t\'es où, papaoutai?
+			Où t\'es, papaoutai?
+			Où t\'es, papaoutai?
+			Où t\'es, papaoutai?
+			Où t\'es, où t\'es où, papaoutai?
+			Où est ton papa?
+			Dis-moi, où est ton papa?
+			Sans même devoir lui parler
+			Il sait ce qui ne va pas
+			Ah, sacré papa
+			Dis-moi, où es-tu caché?
+			Ça doit faire au moins mille fois que j\'ai
+			Compté mes doigts
+			Hey
+			Où est ton papa?
+			Dis-moi, où est ton papa?
+			Sans même devoir lui parler
+			Il sait ce qui ne va pas
+			Ah, sacré papa
+			Dis-moi, où es-tu caché?
+			Ça doit faire au moins mille fois que j\'ai
+			Compté mes doigts
+			Hey
+			Où t\'es, papaoutai?
+			Où t\'es, papaoutai?
+			Où t\'es, papaoutai?
+			Où t\'es, où t\'es où, papaoutai?
+			Où t\'es, papaoutai?
+			Où t\'es, papaoutai?
+			Où t\'es, papaoutai?
+			Où t\'es, où t\'es où, papaoutai?
+			', 'Pop', 'Francês'),
+			('Since I´ve Been Loving You', 'Led Zeppelin',
+			'Working from seven to eleven every night
+			It really makes life a drag, I don\'t think that\'s right
+			I\'ve really, been the best, the best of fools
+			I did what I could, yeah
+			\'Cause I love you, baby
+			How I love you, darling
+			How I love you, baby
+			How I love you, girl, little girl
+			Baby, since I\'ve been loving you, yeah
+			I\'m about to lose my worried mind, oh yeah
+			Everybody trying to tell me
+			That you didn\'t mean me no good
+			I\'ve been trying, Lord, let me tell you
+			Let me tell you I really did the best I could
+			I\'ve been working from seven to eleven every night
+			I said it kinda makes my life a drag, drag, drag, drag,
+			Lord, that ain\'t right
+			Since I\'ve been loving you
+			I\'m about to lose my worried mind
+			Said I\'ve been crying, my tears they fell like rain
+			Don\'t you hear, don\'t you hear them falling
+			Do you remember, mama, when I knocked upon your door?
+			I said you had the nerve to tell me
+			you didn\'t want me no more, yeah
+			I open my front door,
+			hear my back door slam
+			You must have one of them new fangled back door man
+			I\'ve been working from seven, seven, seven,
+			to eleven every night
+			It kinda makes my life a drag, drag, drag
+			Baby, since I\'ve been loving you
+			I\'m about to lose, I\'m about lose to my worried mind',
+			'Rock', 'Inglês');
             
 insert into traducao (fkmusica, letra, idioma) 
 values		(100, 'Um guerreiro dos dias modernos
@@ -318,7 +431,118 @@ values		(100, 'Um guerreiro dos dias modernos
 			Heathcliff, sou eu, Cathy, voltei para casa
 			Estou com tanto frio, deixe-me entrar por sua janela
 			Heathcliff, sou eu, Cathy, voltei para casa
-			Estou com tanto frio', 'Português');
+			Estou com tanto frio', 'Português'),
+			(103, 'Diga-me de onde ele vem
+			E então eu saberei para onde estou indo
+			Mamãe diz que se você procura bem,
+			Sempre acabará encontrando
+			Ela diz que ele nunca está muito longe
+			Que ele trabalha muito
+			Mamãe diz que trabalhar é bom,
+			Bem melhor que estar em má companhia
+			Não é?
+			Onde está o seu pai?
+			Diga-me, onde está o seu pai?
+			Sem mesmo nos responder,
+			Ele sabe o que está errado
+			Ah, sagrado pai!
+			Diga-me onde você tem se escondido!
+			Devem ter sido pelo menos mil vezes que eu
+			Contei nos dedos
+			Onde está você? Papai, onde está você?
+			Onde está você? Papai, onde está você?
+			Onde está você? Papai, onde está você?
+			Onde está você, onde está você?
+			Onde, papai, onde está você?
+			Onde está você? Papai, onde está você?
+			Onde está você? Papai, onde está você?
+			Onde está você? Papai, onde está você?
+			Onde está você, onde está você?
+			Onde, papai, onde está você?
+			Se acreditamos nisso ou não,
+			Uma hora não vamos mais
+			Mais cedo ou mais tarde seremos todos pais
+			E de um dia para o outro, teremos desaparecido
+			Seremos detestáveis?
+			Seremos admiráveis?
+			Genitores ou gênios?
+			Digam-nos, quem dá à luz os irresponsáveis?
+			Ah, digam-nos quem
+			Todo mundo sabe come fazer bebês
+			Mas ninguém sabe como fazer pais
+			Senhor, "eu sei tudo", deve tê-lo herdado, é isso
+			Está chupando o dedo ou o quê?
+			Digam-nos onde está escondido
+			Devem ter sido ao menos mil vezes que nós
+			Contamos nossos dedos
+			Onde está você? Papai, onde está você?
+			Onde está você? Papai, onde está você?
+			Onde está você? Papai, onde está você?
+			Onde está você, onde está você?
+			Onde, papai, onde está você?
+			Onde está você? Papai, onde está você?
+			Onde está você? Papai, onde está você?
+			Onde está você? Papai, onde está você?
+			Onde está você, onde está você?
+			Onde, papai, onde está você?
+			Onde está o seu papai?
+			Diga-me, onde está o seu papai?
+			Sem mesmo falar com ele,
+			Ele sabe o que está errado
+			Ah, sagrado papai!
+			Diga-me onde você se escondeu!
+			Devem ter sido ao menos mil vezes que eu
+			Contei meus dedos
+			Onde está o seu papai?
+			Diga-me, onde está o seu papai?
+			Sem mesmo nos responder,
+			Ele sabe o que está errado
+			Ah, sagrado papai!
+			Diga-me onde você se escondeu!
+			Devem ter sido ao menos mil vezes que eu
+			Contei meus dedos
+			Onde está você? Papai, onde está você?
+			Onde está você? Papai, onde está você?
+			Onde está você? Papai, onde está você?
+			Onde está você, onde está você?
+			Onde, papai, onde está você?
+			Onde está você? Papai, onde está você?
+			Onde está você? Papai, onde está você?
+			Onde está você? Papai, onde está você?
+			Onde está você, onde está você?
+			Onde, papai, onde está você?', 'Português'),
+			(104, 'Trabalhando das sete às onze, todas as noites,
+			Isso faz da vida um saco, acho que isto não está certo.
+			Eu realmente, tenho bancado o perfeito idiota,
+			eu fiz o que pude.
+			Pois eu te amo, baby,
+			Como eu te amo, querida,
+			Como eu te amo, baby,
+			Como eu te amo, garota, garotinha.
+			Mas baby, desde que andei amando você,
+			estou a ponto de perder minha mente angustiada, oh, yeah.
+			Todo mundo tenta me dizer
+			que você não quis me fazer nenhum bem.
+			Eu tenho tentado, Senhor, deixe-me lhe dizer,
+			deixe-me lhe dizer, eu realmente fiz o melhor que pude.
+			Eu tenho trabalhado das sete às onze todas as noites,
+			eu disse que isto meio que faz da minha vida um saco.
+			Senhor, isso não está certo... Não, não.
+			Desde que andei amando você,
+			estou a ponto de perder minha mente angustiada
+			Disse que tenho chorado. Minhas lágrimas parecem chuva,
+			Você não ouve, você não as ouve cair?
+			Você se lembra mulher, quando eu bati em sua porta?
+			Eu disse que você se atreveu a me falar
+			que não me queria mais, é
+			Eu abro minha porta da frente,
+			e escuto minha porta dos fundos bater,
+			Você deve ter um desses amantes mais jovens.
+			Eu tenho trabalhado das sete, das sete, das sete às onze
+			todas as noites, isto meio que faz da minha vida um saco...
+			Baby, desde que andei amando você,
+			estou a ponto de perder, estou
+			a ponto de perder minha mente angustiada', 'Português');
             
 insert into comentario (texto, avaliacao, fkusuario, fktraducao) 
 values		('Tradução ótima', 5, 2, 1),

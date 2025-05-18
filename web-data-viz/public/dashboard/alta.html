@@ -6,33 +6,70 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Em alta</title>
-	<link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+	<link rel="shortcut icon" href="../assets/imgs/logo.png" type="image/x-icon">
 	<link rel="stylesheet" href="../css/traduzir.css">
 	<link rel="stylesheet" href="../css/header_footer.css">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
-<body>
+<body onload="exibirKpis()">
 
 	<header>
 		<section class="container">
-			<a href="../index.html"><img src="../img/logo.png" alt="logo"></a>
+			<a href="../index.html"><img src="../assets/imgs/logo.png" alt="logo"></a>
 			<nav class="navbar">
 				<ul>
-					<li><a href="../paginas/alta.html">Em alta</a></li>
-					<li class="login"><a href="../paginas/login.html">Login</a></li>
+					<li><a href="pesquisar.html">Pesquisar</a></li>
+					<li><a href="bemvindo.html">Bem vindo</a></li>
+					<li class="log-out" onclick="limparSessao()"><a href="../index.html">Sair</a>
+					</li>
 				</ul>
 			</nav>
 		</section>
 	</header>
 
 	<main>
-		<canvas></canvas>
+		<section class="content">
+			<div class="kpis">
+				<div class="kpi">
+					Seu gênero favorito: 
+					<span id="b_seugen"> sengen</span>
+				</div>
+				<div class="kpi">
+					Música mais comentada:
+					<span id="b_mus_fav"> sengen</span>
+				</div>
+				<div class="kpi">
+					Música melhor avaliada:
+					<span id="b_mus_ava"> sengen</span>
+				</div>
+				<div class="kpi">
+					Usuário que mais comenta:
+					<span id="b_user"> sengen</span>
+				</div>
+			</div>
+			<div class="graficos">
+				<div class="grafico1">
+					<canvas id="pizza">
+
+					</canvas>
+				</div>
+				<div class="grafico2">
+					<canvas>
+					
+					</canvas>
+				</div>
+			</div>
+		</section>
 
 	</main>
 
 	<footer>
-		<p class="made">Made by Gabriela Cunha</p>
+		<p class="made">
+			<img src="../assets/imgs/logo.png" alt="logo">
+			Made by Gabriela Cunha
+		</p>
 		<div class="direita">
 			<h3>Contato</h3>
 			<p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -55,13 +92,17 @@
 		</div>
 		<div class="links">
 			<h2>Links</h2>
-			<a href="paginas/alta.html">Em alta</a>
-			<a href="paginas/pesquisar.html">Traduções</a>
-			<a href="paginas/login.html">Login</a>
-			<a href="paginas/cadastro.html">Cadastro</a>
+			<a href="alta.html">Em alta</a>
+			<a href="pesquisar.html">Traduções</a>
+			<a href="../login.html">Login</a>
+			<a href="../cadastro.html">Cadastro</a>
 		</div>
 	</footer>
 
 </body>
+<script>
+	
+	b_seugen.innerHTML = sessionStorage.FAVORITO_USUARIO;
 
+</script>
 </html>

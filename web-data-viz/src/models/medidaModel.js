@@ -29,7 +29,36 @@ function buscarMedidasEmTempoReal(idAquario) {
     return database.executar(instrucaoSql);
 }
 
+function musicaMaisComentada() {
+
+    var instrucaoSql = ` DESC LIMIT 1`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function musicaMelhorAvaliada() {
+
+    var instrucaoSql = ` DESC LIMIT 1`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function usuarioMaisComenta() {
+
+    var instrucaoSql = ` DESC LIMIT 1`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+
+
 module.exports = {
     buscarUltimasMedidas,
-    buscarMedidasEmTempoReal
+    buscarMedidasEmTempoReal,
+    musicaMaisComentada,
+    musicaMelhorAvaliada,
+    usuarioMaisComenta
 }
