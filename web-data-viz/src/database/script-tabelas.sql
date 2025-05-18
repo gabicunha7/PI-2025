@@ -547,11 +547,15 @@ values		(100, 'Um guerreiro dos dias modernos
 insert into comentario (texto, avaliacao, fkusuario, fktraducao) 
 values		('Tradução ótima', 5, 2, 1),
 			('Tem muito o que melhorar', 2, 3, 1),
-			('Perfeita, trouxe bem a ideia principal', 5, 4, 2),
+			('Perfeita, trouxe bem a ideia principal', 5, 4, 1),
             ('Achei que falou alguns pontos', 4, 3, 2),
             ('Bem ruim', 1, 4, 3),
 			('Faltou adaptar algumas coisas', 3, 1, 3),
 			('Me ajudou muito, adorei', 5, 5, 1),
             ('Muito confusa', 2, 5, 3),
-            ('Pode melhorar', 3, 2, 2);
+            ('Pode melhorar', 3, 5, 2),
+			('Não gostei de alguns pontos', 3, 1, 4),
+			('Melhore', 2, 5, 4),
+            ('Muito boa', 4, 3, 5),
+            ('Finalmente entendi o significado', 5, 2, 5);
             

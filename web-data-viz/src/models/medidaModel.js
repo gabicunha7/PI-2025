@@ -31,7 +31,14 @@ function buscarMedidasEmTempoReal(idAquario) {
 
 function musicaMaisComentada() {
 
-    var instrucaoSql = ` DESC LIMIT 1`;
+    var instrucaoSql = `select m.nome, count(c.fktraducao) contagem
+                        from musica m
+                        inner join traducao t
+                                on m.id = t.fkmusica
+                        inner join comentario c 
+                                on t.id = c.fktraducao
+                        group by m.nome
+                        order by count(c.fktraducao) desc limit 1;`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -39,7 +46,14 @@ function musicaMaisComentada() {
 
 function musicaMelhorAvaliada() {
 
-    var instrucaoSql = ` DESC LIMIT 1`;
+    var instrucaoSql = `select m.nome
+                        from musica m
+                        inner join traducao t
+                                on m.id = t.fkmusica
+                        inner join comentario c 
+                                on t.id = c.fktraducao
+                        group by m.nome
+                        order by round(avg(c.avaliacao), 1) desc limit 1;`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -47,11 +61,27 @@ function musicaMelhorAvaliada() {
 
 function usuarioMaisComenta() {
 
-    var instrucaoSql = ` DESC LIMIT 1`;
+    var instrucaoSql = `select u.nome, count(u.nome) contagem 
+                        from comentario c 
+                        inner join usuario u
+                                on u.id = c.fkusuario
+                        group by u.nome
+                        order by count(u.nome) desc limit 1;`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
+
+function buscarGraficoPizza() {
+
+    var instrucaoSql = `select u.genfav, count(genfav) quantidade
+    from usuario u
+    group by u.genfav;`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 
 
 
@@ -60,5 +90,6 @@ module.exports = {
     buscarMedidasEmTempoReal,
     musicaMaisComentada,
     musicaMelhorAvaliada,
-    usuarioMaisComenta
+    usuarioMaisComenta,
+    buscarGraficoPizza
 }
