@@ -8,14 +8,14 @@
     var nomeVar = ipt_nome.value;
     var emailVar = ipt_email.value;
     var senhaVar = ipt_senha.value;
-    var MusGostoVar = sel_gosto_musical.value;
+    var genFavVar = sel_gosto_musical.value;
 
     // Verificando se há algum campo em branco
     if (
       nomeVar == "" ||
       emailVar == "" ||
       senhaVar == "" ||
-      MusGostoVar == "" 
+      genFavVar == "" 
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
@@ -52,7 +52,7 @@
         nomeServer: nomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,
-        MusGostoServer: MusGostoVar
+        genFavServer: genFavVar
       }),
     })
       .then(function (resposta) {

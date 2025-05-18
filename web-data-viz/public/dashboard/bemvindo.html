@@ -6,9 +6,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Bem vindo</title>
-	<link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+	<link rel="shortcut icon" href="../assets/imgs/logo.png" type="image/x-icon">
 	<link rel="stylesheet" href="../css/bemvindo.css">
 	<link rel="stylesheet" href="../css/header_footer.css">
+	<script src="../js/sessao.js"></script>
 
 </head>
 
@@ -16,11 +17,11 @@
 
 	<header>
 		<section class="container">
-			<a href="../index.html"><img src="../img/logo.png" alt="logo"></a>
+			<a href="../index.html"><img src="../assets/imgs/logo.png" alt="logo"></a>
 			<nav class="navbar">
 				<ul>
 					<li><a href="../paginas/alta.html">Em alta</a></li>
-					<li class="login"><a href="../paginas/login.html">Login</a></li>
+					<li class="login"><a href="../login.html">Login</a></li>
 				</ul>
 			</nav>
 		</section>
@@ -29,7 +30,7 @@
 	<main>
 		<section class="background">
 			<div class="bemvindo">
-				<h1>Bem vindo, Usuário!</h1>
+				<h1>Bem vindo, <span id="b_usuario">usuário</span>!</h1>
 			</div>
 			<div class="content">
 				<div class="cards">
@@ -56,7 +57,7 @@
 						</a>
 					</div>
 					<div class="card">
-						<a href="pesquisar.html">
+						<a class="btn-logout" onclick="limparSessao()">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 								fill="currentColor" class="bi bi-door-closed-fill"
 								viewBox="0 0 16 16">
@@ -68,7 +69,7 @@
 					</div>
 				</div>
 				<div class="imagem">
-					<img src="../img/bemvindo.gif" alt="bemvindo">
+					<img src="../assets/imgs/bemvindo.gif" alt="bemvindo">
 				</div>
 			</div>
 		</section>
@@ -100,11 +101,14 @@
 			<h2>Links</h2>
 			<a href="paginas/alta.html">Em alta</a>
 			<a href="paginas/pesquisar.html">Traduções</a>
-			<a href="paginas/login.html">Login</a>
-			<a href="paginas/cadastro.html">Cadastro</a>
+			<a href="../login.html">Login</a>
+			<a href="../cadastro.html">Cadastro</a>
 		</div>
 	</footer>
 
 </body>
+<SCript>
+	b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+</SCript>
 
 </html>

@@ -73,6 +73,13 @@
 	outline: none;
 }
 
+#sel_gosto_musical {
+	background-color: #110b08a2;
+	color: var(--branco);
+	border: solid 2px var(--marrom);
+	padding: 2px;
+}
+
 .form input:hover {
 	border-color: var(--amarelo-claro);
 	transition: 0.5s;

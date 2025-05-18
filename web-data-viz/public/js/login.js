@@ -36,12 +36,13 @@ function entrar() {
 			resposta.json().then(json => {
 				console.log(json);
 				console.log(JSON.stringify(json));
-				sessionStorage.EMAIL_USUARIO = json.email;
-				sessionStorage.NOME_USUARIO = json.nome;
 				sessionStorage.ID_USUARIO = json.id;
+				sessionStorage.NOME_USUARIO = json.nome;
+				sessionStorage.EMAIL_USUARIO = json.email;
+				sessionStorage.FAVORITO_USUARIO = json.genfav;
 
 				setTimeout(function () {
-					window.location = "./dashboard/cards.html";
+					window.location = "./dashboard/bemvindo.html";
 				}, 1000); // apenas para exibir o loading
 
 			});

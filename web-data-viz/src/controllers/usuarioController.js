@@ -22,9 +22,10 @@ function autenticar(req, res) {
 
                         res.json({
                             id: resultadoAutenticar[0].id,
+                            nome: resultadoAutenticar[0].nome,
                             email: resultadoAutenticar[0].email,
                             senha: resultadoAutenticar[0].senha,
-                            MusGosto: resultadoAutenticar[0].genfav
+                            genFav: resultadoAutenticar[0].genfav
                         });
 
 
@@ -50,7 +51,7 @@ function cadastrar(req, res) {
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
-    var MusGosto = req.body.MusGostoServer;
+    var genFav = req.body.genFavServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -59,12 +60,12 @@ function cadastrar(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
-    } else if (MusGosto == undefined) {
+    } else if (genFav == undefined) {
         res.status(400).send("Seu gosto musical está undefined!");
     } else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, senha, MusGosto)
+        usuarioModel.cadastrar(nome, email, senha, genFav)
             .then(
                 function (resultado) {
                     res.json(resultado);
