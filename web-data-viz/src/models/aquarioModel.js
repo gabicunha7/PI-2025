@@ -9,8 +9,21 @@ function buscarAquariosPorEmpresa(empresaId) {
 }
 
 function cadastrar(empresaId, descricao) {
-  
+
   var instrucaoSql = `INSERT INTO (descricao, fk_empresa) aquario VALUES (${descricao}, ${empresaId})`;
+
+  console.log("Executando a instrução SQL: \n" + instrucaoSql);
+  return database.executar(instrucaoSql);
+}
+
+function buscarMusicas() {
+  var instrucaoSql = `select m.id, m.nome, m.artista, round(avg(c.avaliacao), 1) as avaliacao
+                      from musica m
+                      inner join traducao t
+                          on m.id = t.fkmusica
+                      inner join comentario c 
+                          on t.id = c.fktraducao
+                      group by m.id, m.nome, m.artista;`;
 
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
   return database.executar(instrucaoSql);
@@ -19,5 +32,6 @@ function cadastrar(empresaId, descricao) {
 
 module.exports = {
   buscarAquariosPorEmpresa,
-  cadastrar
+  cadastrar,
+  buscarMusicas
 }

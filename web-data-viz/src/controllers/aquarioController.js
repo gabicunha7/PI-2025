@@ -43,7 +43,24 @@ function cadastrar(req, res) {
   }
 }
 
+
+function buscarMusicas(req, res) {
+  aquarioModel.buscarMusicas.then((resultado) => {
+    if (resultado.length > 0) {
+      console.log(resultado);
+      res.status(200).json(resultado);
+    } else {
+      res.status(204).json([]);
+    }
+  }).catch(function (erro) {
+    console.log(erro);
+    console.log("Houve um erro ao buscar os aquarios: ", erro.sqlMessage);
+    res.status(500).json(erro.sqlMessage);
+  });
+}
+
 module.exports = {
   buscarAquariosPorEmpresa,
-  cadastrar
+  cadastrar,
+  buscarMusicas
 }

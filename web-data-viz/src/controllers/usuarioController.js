@@ -1,5 +1,5 @@
 var usuarioModel = require("../models/usuarioModel");
-// var aquarioModel = require("../models/aquarioModel");
+var aquarioModel = require("../models/aquarioModel");
 
 function autenticar(req, res) {
     var email = req.body.emailServer;
@@ -20,13 +20,21 @@ function autenticar(req, res) {
                     if (resultadoAutenticar.length == 1) {
                         console.log(resultadoAutenticar);
 
-                        res.json({
-                            id: resultadoAutenticar[0].id,
-                            nome: resultadoAutenticar[0].nome,
-                            email: resultadoAutenticar[0].email,
-                            senha: resultadoAutenticar[0].senha,
-                            genFav: resultadoAutenticar[0].genfav
-                        });
+                        aquarioModel.buscarMusicas(resultadoAutenticar[0])
+                            .then((resultadoMusicas) => {
+                                if (resultadoMusicas.length > 0) {
+                                    res.json({
+                                        id: resultadoAutenticar[0].id,
+                                        nome: resultadoAutenticar[0].nome,
+                                        email: resultadoAutenticar[0].email,
+                                        senha: resultadoAutenticar[0].senha,
+                                        genFav: resultadoAutenticar[0].genfav,
+                                        musicas: resultadoMusicas
+                                    });
+                                } else {
+                                    res.status(204).json({ musicas: [] });
+                                }
+                            })
 
 
                     } else if (resultadoAutenticar.length == 0) {
