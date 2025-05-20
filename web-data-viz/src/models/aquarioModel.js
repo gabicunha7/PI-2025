@@ -29,9 +29,22 @@ function buscarMusicas() {
   return database.executar(instrucaoSql);
 }
 
+function buscarMusicaPorID(idMusica) {
+  var instrucaoSql = `select m.artista, m.nome, m.letra, t.letra
+                      from musica m
+                      inner join traducao t
+                          on m.id = t.fkmusica
+                      where m.id = ${idMusica};`;
+
+  console.log("Executando a instrução SQL: \n" + instrucaoSql);
+  return database.executar(instrucaoSql);
+}
+
+
 
 module.exports = {
   buscarAquariosPorEmpresa,
   cadastrar,
-  buscarMusicas
+  buscarMusicas,
+  buscarMusicaPorID
 }

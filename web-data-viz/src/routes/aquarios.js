@@ -11,6 +11,10 @@ router.get("/musicas", function (req, res) {
   aquarioController.buscarMusicas(req, res);
 });
 
+router.get("/letra/:idMusica", function (req, res) {
+  aquarioController.buscarLetraMusica(req, res);
+});
+
 router.post("/cadastrar", function (req, res) {
   aquarioController.cadastrar(req, res);
 })

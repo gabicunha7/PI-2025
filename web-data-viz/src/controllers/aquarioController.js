@@ -54,7 +54,22 @@ function buscarMusicas(req, res) {
     }
   }).catch(function (erro) {
     console.log(erro);
-    console.log("Houve um erro ao buscar os aquarios: ", erro.sqlMessage);
+    console.log("Houve um erro ao listar músicas: ", erro.sqlMessage);
+    res.status(500).json(erro.sqlMessage);
+  });
+}
+
+function buscarLetraMusica(req, res) {
+  aquarioModel.buscarMusicaPorID(idMusica).then((resultado) => {
+    if (resultado.length > 0) {
+      console.log(resultado);
+      res.status(200).json(resultado);
+    } else {
+      res.status(204).json([]);
+    }
+  }).catch(function (erro) {
+    console.log(erro);
+    console.log("Houve um erro ao buscar letra música: ", erro.sqlMessage);
     res.status(500).json(erro.sqlMessage);
   });
 }
@@ -62,5 +77,6 @@ function buscarMusicas(req, res) {
 module.exports = {
   buscarAquariosPorEmpresa,
   cadastrar,
-  buscarMusicas
+  buscarMusicas,
+  buscarLetraMusica
 }

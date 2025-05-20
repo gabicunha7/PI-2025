@@ -6,22 +6,24 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Música</title>
-	<link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+	<link rel="shortcut icon" href="../assets/imgs/logo.png" type="image/x-icon">
 	<link rel="stylesheet" href="../css/musica.css">
 	<link rel="stylesheet" href="../css/header_footer.css">
+	<script src="../js/sessao.js"></script>
 
 
 </head>
 
-<body>
+<body onload="exibirLetraMusica()">
 
 	<header>
 		<section class="container">
-			<a href="../index.html"><img src="../img/logo.png" alt="logo"></a>
+			<a href="../index.html"><img src="../assets/imgs/logo.png" alt="logo"></a>
 			<nav class="navbar">
 				<ul>
-					<li><a href="../paginas/alta.html">Em alta</a></li>
-					<li class="login"><a href="../paginas/login.html">Login</a></li>
+					<li><a href="alta.html">Em alta</a></li>
+					<li><a href="bemvindo.html">Bem vindo</a></li>
+					<li class="log-out" onclick="limparSessao()"><a href="../index.html">Sair</a>
 				</ul>
 			</nav>
 		</section>
@@ -31,7 +33,6 @@
 		<section class="infos">
 			<h1>Tom Sawyer</h1>
 			<p>Rush</p>
-			<p>Tradutor</p>
 		</section>
 		<section class="conteudo" id="conteudo">
 			<p class="original" lang="en">A modern-day warrior</p>
@@ -122,7 +123,10 @@
 	</main>
 
 	<footer>
-		<p class="made">Made by Gabriela Cunha</p>
+		<p class="made">
+			<img src="../assets/imgs/logo.png" alt="logo">
+			Made by Gabriela Cunha
+		</p>
 		<div class="direita">
 			<h3>Contato</h3>
 			<p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -145,10 +149,10 @@
 		</div>
 		<div class="links">
 			<h2>Links</h2>
-			<a href="paginas/alta.html">Em alta</a>
-			<a href="paginas/pesquisar.html">Traduções</a>
-			<a href="paginas/login.html">Login</a>
-			<a href="paginas/cadastro.html">Cadastro</a>
+			<a href="alta.html">Em alta</a>
+			<a href="pesquisar.html">Traduções</a>
+			<a href="../login.html">Login</a>
+			<a href="../cadastro.html">Cadastro</a>
 		</div>
 	</footer>
 

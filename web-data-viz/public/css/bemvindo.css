@@ -13,7 +13,7 @@
 .background {
 	display: flex;
 	flex-direction: column;
-	height: fit-content;
+	height: 90vh;
 	width: 100%;
 	/* background-color: var(--verde); */
 	background-image: url(../assets/imgs/sadwood.PNG);
