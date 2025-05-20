@@ -29,7 +29,7 @@ idioma varchar(45) not null
 create table traducao(
 id int primary key auto_increment,
 fkmusica int unique not null,
-letra mediumtext not null,
+letra_trad mediumtext not null,
 idioma varchar(45) not null,
 constraint fk_musica foreign key(fkmusica) references musica(id)
 );
@@ -53,218 +53,66 @@ values		('Ronaldo', 'ronaldo@gmail.com', 'senha1', 'Rock'),
 			('João', 'joao@email.com', 'senha5', 'Indie');
             
 insert into musica (nome, artista, letra, genero, idioma) 
-values		('Tom Sawyer', 'Rush', 'A modern-day warrior\n
-			Mean, mean stride\n
-			Today\'s Tom Sawyer\n
-			Mean, mean pride\n
-			Though his mind is not for rent\n
-			Don\'t put him down as arrogant\n
-			His reserve, a quiet defense\n
-			Riding out the day\'s events\n
-			The river\n
-			What you say about his company\n
-			Is what you say about society\n
-			Catch the mist, catch the myth\n
-			Catch the mystery, catch the drift\n
-			The world is, the world is\n
-			Love and life are deep\n
-			Maybe as his skies are wide\n
-			Today\'s Tom Sawyer, he gets high on you\n
-			And the space he invades, he gets by on you\n
-			No, his mind is not for rent\n
-			To any god or government\n
-			Always hopeful, yet discontent\n
-			He knows changes aren\'t permanent\n
-			But change is\n
-			And what you say about his company\n
-			Is what you say about society\n
-			Catch the witness, catch the wit\n
-			Catch the spirit, catch the spit\n
-			The world is, the world is\n
-			Love and life are deep\n
-			Maybe as his eyes are wide\n
-			Exit the warrior\n
-			Today\'s Tom Sawyer\n
-			He gets high on you\n
-			And the energy you trade\n
-			He gets right on to\n
-			The friction of the day\n', 'Rock', 'Inglês'),
-			('Lover, You Should’ve Come Over', 'Jeff Buckley', 'Looking out the door I see the rain\n
-			Fall upon the funeral mourners\n
-			Parading in a wake of sad relations\n
-			As their shoes fill up with water\n
-			Maybe I\'m too young\n
-			To keep good love from going wrong\n
-			But tonight you\'re on my mind\n
-			So... you\'ll never know\n
-			Broken down and hungry for your love\n
-			With no way to feed it\n
-			Where are you tonight?\n
-			Child, ya know how much I need it\n
-			Too young to hold on\n
-			And too old to just break free and run\n
-			Sometimes a man gets carried away\n
-			When he feels like should be having his fun\n
-			Much too blind to see the damage he\'s done\n
-			Sometimes a man must awake to find that\n
-			Really he has no one\n
-			So I\'ll wait for you, love\n
-			And I\'ll burn\n
-			Will I ever see your sweet return?\n
-			Oh, will I ever learn?\n
-			Oh-oh, lover, you should\'ve come over\n
-			\'Cause it\'s not too late\n
-			Lonely is the room, the bed is made\n
-			The open window lets the rain in\n
-			Burning in the corner is the only one who dreams\n
-			He had you with him\n
-			My body turns\n
-			And yearns for a sleep that won\'t ever come\n
-			It\'s never over\n
-			My kingdom for a kiss upon her shoulder\n
-			It\'s never over\n
-			All my riches for her smiles\n
-			When I\'ve slept so soft against her\n
-			It\'s never over\n
-			All my blood for the sweetness of her laughter\n
-			It\'s never over\n
-			She is the tear that hangs inside my soul forever\n
-			Oh, but maybe I\'m just too young\n
-			To keep good love from going wrong\n
-			Oh-oh-oh, lover\n
-			You should\'ve come over, yeah, yes\n
-			Yes, I feel too young to hold on\n
-			And much too old to break free and run\n
-			Too deaf, dumb and blind to see the damage I\'ve done\n
-			Sweet lover, you should\'ve come over\n
-			Oh, love, well I\'ve waited for you\n
-			Lover, lover, lover\n
-			Lover, love, love, love, love, love, love!\n
-			Lover, you should\'ve come over\n
-			\'Cause it\'s not too late\n', 'Alternativo', 'Inglês'),
-			('Wuthering Heights', 'Kate Bush', 'Out on the wily, windy moors
-			We\'d roll and fall in green
-			You had a temper like my jealousy
-			Too hot, too greedy
-			How could you leave me
-			When I needed to possess you?
-			I hated you, I loved you, too
-			Bad dreams in the night
-			They told me I was going to lose the fight
-			Leave behind my Wuthering, Wuthering
-			Wuthering Heights
-			Heathcliff, it\'s me, I\'m Cathy
-			I\'ve come home, I\'m so cold
-			Let me in your window
-			Heathcliff, it\'s me, I\'m Cathy
-			I\'ve come home, I\'m so cold
-			Let me in your window
-			Ooh, it gets dark, it gets lonely
-			On the other side from you
-			I pine a lot, I find the lot
-			Falls through without you
-			I\'m coming back love, cruel Heathcliff
-			My one dream, my only master
-			Too long I roam in the night
-			I\'m coming back to his side to put it right
-			I\'m coming home to wuthering, wuthering
-			Wuthering Heights
-			Heathcliff, it\'s me, I\'m Cathy
-			I\'ve come home, I\'m so cold
-			Let me in your window
-			Heathcliff, it\'s me, I\'m Cathy
-			I\'ve come home, I\'m so cold
-			Let me in your window
-			Ooh, let me have it
-			Let me grab your soul away
-			Ooh, let me have it
-			Let me grab your soul away
-			You know it\'s me, Cathy
-			Heathcliff, it\'s me, I\'m Cathy
-			I\'ve come home, I\'m so cold
-			Let me in your window
-			Heathcliff, it\'s me, I\'m Cathy
-			I\'ve come home, I\'m so cold
-			Let me in your window
-			Heathcliff, it\'s me, I\'m Cathy
-			I\'ve come home, I\'m so cold', 'Pop', 'Inglês'),
-			('Papaoutai', 'Stromae',
-			'Dites-moi d\'où il vient
-			Enfin je saurai où je vais
-			Maman dit que lorsqu\'on cherche bien
-			On finit toujours par trouver
-			Elle dit qu\'il n\'est jamais très loin
-			Qu\'il part très souvent travailler
-			Maman dit "travailler, c\'est bien"
-			Bien mieux qu\'être mal accompagné
-			Pas vrai?
-			Où est ton papa?
-			Dis-moi, où est ton papa?
-			Sans même devoir lui parler
-			Il sait ce qui ne va pas
-			Ah, sacré papa
-			Dis-moi, où es-tu caché?
-			Ça doit faire au moins mille fois que j\'ai
-			Compté mes doigts
-			Hey
-			Où t\'es, papaoutai?
-			Où t\'es, papaoutai?
-			Où t\'es, papaoutai?
-			Où t\'es, où t\'es où, papaoutai?
-			Où t\'es, papaoutai?
-			Où t\'es, papaoutai?
-			Où t\'es, papaoutai?
-			Où t\'es, où t\'es où, papaoutai?
-			Quoi? Qu\'on y croie ou pas
-			Y aura bien un jour où on n\'y croira plus
-			Un jour ou l\'autre, on sera tous papas
-			Et d\'un jour à l\'autre, on aura disparu
-			Serons-nous détestables?
-			Serons-nous admirables?
-			Des géniteurs ou des génies?
-			Dites-nous qui donne naissance aux irresponsables?
-			Ah, dites-nous qui?
-			Tiens, tout le monde sait comment on fait des bébés
-			Mais personne sait comment on fait des papas
-			Monsieur je-sais-tout en aurait hérité, c\'est ça
-			Faut l\'sucer d\'son pouce ou quoi?
-			Dites-nous où c\'est caché, ça doit
-			Faire au moins mille fois qu\'on a
-			Bouffé nos doigts
-			Hey
-			Où t\'es, papaoutai?
-			Où t\'es, papaoutai?
-			Où t\'es, papaoutai?
-			Où t\'es, où t\'es où, papaoutai?
-			Où t\'es, papaoutai?
-			Où t\'es, papaoutai?
-			Où t\'es, papaoutai?
-			Où t\'es, où t\'es où, papaoutai?
-			Où est ton papa?
-			Dis-moi, où est ton papa?
-			Sans même devoir lui parler
-			Il sait ce qui ne va pas
-			Ah, sacré papa
-			Dis-moi, où es-tu caché?
-			Ça doit faire au moins mille fois que j\'ai
-			Compté mes doigts
-			Hey
-			Où est ton papa?
-			Dis-moi, où est ton papa?
-			Sans même devoir lui parler
-			Il sait ce qui ne va pas
-			Ah, sacré papa
-			Dis-moi, où es-tu caché?
-			Ça doit faire au moins mille fois que j\'ai
-			Compté mes doigts
-			Hey
-			Où t\'es, papaoutai?
-			Où t\'es, papaoutai?
-			Où t\'es, papaoutai?
-			Où t\'es, où t\'es où, papaoutai?
-			Où t\'es, papaoutai?
-			Où t\'es, papaoutai?
-			Où t\'es, papaoutai?
+values		('Tom Sawyer', 'Rush', 'A modern-day warrior\nMean, mean stride\nToday\'s Tom Sawyer\nMean, mean pride\nThough his mind is not for rent\nDon\'t put him down as arrogant\nHis reserve, a quiet defense\nRiding out the day\'s events\nThe river\nWhat you say about his company\nIs what you say about society\nCatch the mist, catch the myth\nCatch the mystery, catch the drift\nThe world is, the world is\nLove and life are deep\nMaybe as his skies are wide\nToday\'s Tom Sawyer, he gets high on you\nAnd the space he invades, he gets by on you\nNo, his mind is not for rent\nTo any god or government\nAlways hopeful, yet discontent\nHe knows changes aren\'t permanent\nBut change is\nAnd what you say about his company\nIs what you say about society\nCatch the witness, catch the wit\nCatch the spirit, catch the spit\nThe world is, the world is\nLove and life are deep\nMaybe as his eyes are wide\nExit the warrior\nToday\'s Tom Sawyer\nHe gets high on you\nAnd the energy you trade\nHe gets right on to\nThe friction of the day\n', 'Rock', 'Inglês'),
+			('Lover, You Should’ve Come Over', 'Jeff Buckley', 'Looking out the door I see the rain\nFall upon the funeral mourners\nParading in a wake of sad relations\nAs their shoes fill up with water\nMaybe I\'m too young\nTo keep good love from going wrong\nBut tonight you\'re on my mind\nSo... you\'ll never know\nBroken down and hungry for your love\nWith no way to feed it\nWhere are you tonight?\nChild, ya know how much I need it\nToo young to hold on\nAnd too old to just break free and run\nSometimes a man gets carried away\nWhen he feels like should be having his fun\nMuch too blind to see the damage he\'s done\nSometimes a man must awake to find that\nReally he has no one\nSo I\'ll wait for you, love\nAnd I\'ll burn\nWill I ever see your sweet return?\nOh, will I ever learn?\nOh-oh, lover, you should\'ve come over\n\'Cause it\'s not too late\nLonely is the room, the bed is made\nThe open window lets the rain in\nBurning in the corner is the only one who dreams\nHe had you with him\nMy body turns\nAnd yearns for a sleep that won\'t ever come\nIt\'s never over\nMy kingdom for a kiss upon her shoulder\nIt\'s never over\nAll my riches for her smiles\nWhen I\'ve slept so soft against her\nIt\'s never over\nAll my blood for the sweetness of her laughter\nIt\'s never over\nShe is the tear that hangs inside my soul forever\nOh, but maybe I\'m just too young\nTo keep good love from going wrong\nOh-oh-oh, lover\nYou should\'ve come over, yeah, yes\nYes, I feel too young to hold on\nAnd much too old to break free and run\nToo deaf, dumb and blind to see the damage I\'ve done\nSweet lover, you should\'ve come over\nOh, love, well I\'ve waited for you\nLover, lover, lover\nLover, love, love, love, love, love, love!\nLover, you should\'ve come over\n\'Cause it\'s not too late\n', 'Alternativo', 'Inglês'),
+			('Wuthering Heights', 'Kate Bush', 'Out on the wily, windy moors\nWe\'d roll and fall in green\nYou had a temper like my\njealousy\nToo hot, too greedy\nHow could you leave me\nWhen I needed to possess you?\nI hated you, I loved you too\nBad dreams in the night\nThey told me I was going to lose the fight\nLeave behind my Wuthering, Wuthering\nWuthering Heights\nHeathcliff, it\'s me, I\'m Cathy\nI\'ve come home, I\'m so cold\nLet me in your window\nHeathcliff, it\'s me I\'m Cathy\nI\'ve come home, I\'m so cold\nLet me in your window\nOoh, it gets dark, it gets lonely\nOn the other side from you\nI pine a lot, I find the lot\nFalls through without you\nI\'m coming back love, cruel Heathcliff\nMy one dream, my only master\nToo long I roam in the night\nI\'m coming back to his side to put it right\nI\'m coming home to wuthering, wuthering\nWuthering Heights\nHeathcliff, it\'s me, I\'m Cathy\nI\'ve come home, I\'m so cold\nLet me in your window\nHeathcliff, it\'s me, I\'m Cathy\nI\'ve come home, I\'m so cold\nLet me in your window\nOoh, let me have it\nLet me grab your soul away\nOoh, let me have it\nLet me grab your soul away\nYou know it\'s me, Cathy\nHeathcliff, it\'s me I\'m Cathy\nI\'ve come home, I\'m so cold\nLet me in your window\nHeathcliff, it\'s me, I\'m Cathy\nI\'ve come home, I\'m so cold\nLet me in your window\nHeathcliff, it\'s me, I\'m Cathy\nI\'ve come home, I\'m so cold', 'Pop', 'Inglês'),
+			('Papaoutai', 'Stromae','Dites-moi d\'où il vient\nEnfin je saurai où je vais\nMaman dit que lorsqu\'on cherche bien\nOn finit toujours par trouver\nElle dit qu\'il n\'est jamais très loin\nQu\'il part très souvent travailler\nMaman dit "travailler, c\'est bien"\nBien mieux qu\'être mal accompagné\nPas vrai?\nOù est ton papa?\nDis-moi, où est ton papa?\nSans même devoir lui parler\nIl sait ce qui ne va pas\nAh, sacré papa\nDis-moi, où es-tu caché?\nÇa doit faire au moins mille fois que j\'ai\nCompté mes doigts\nHey\nOù t\'es, papaoutai?\nOù t\'es, papaoutai?\n
+			Où t\'es, papaoutai?\n
+			Où t\'es, où t\'es où, papaoutai?\n
+			Où t\'es, papaoutai?\n
+			Où t\'es, papaoutai?\n
+			Où t\'es, papaoutai?\n
+			Où t\'es, où t\'es où, papaoutai?\n
+			Quoi? Qu\'on y croie ou pas\n
+			Y aura bien un jour où on n\'y croira plus\n
+			Un jour ou l\'autre, on sera tous papas\n
+			Et d\'un jour à l\'autre, on aura disparu\n
+			Serons-nous détestables?\n
+			Serons-nous admirables?\n
+			Des géniteurs ou des génies?\n
+			Dites-nous qui donne naissance aux irresponsables?\n
+			Ah, dites-nous qui?\n
+			Tiens, tout le monde sait comment on fait des bébés\n
+			Mais personne sait comment on fait des papas\n
+			Monsieur je-sais-tout en aurait hérité, c\'est ça\n
+			Faut l\'sucer d\'son pouce ou quoi?\n
+			Dites-nous où c\'est caché, ça doit\n
+			Faire au moins mille fois qu\'on a\n
+			Bouffé nos doigts\n
+			Hey\n
+			Où t\'es, papaoutai?\n
+			Où t\'es, papaoutai?\n
+			Où t\'es, papaoutai?\n
+			Où t\'es, où t\'es où, papaoutai?\n
+			Où t\'es, papaoutai?\n
+			Où t\'es, papaoutai?\n
+			Où t\'es, papaoutai?\n
+			Où t\'es, où t\'es où, papaoutai?\n
+			Où est ton papa?\n
+			Dis-moi, où est ton papa?\n
+			Sans même devoir lui parler\n
+			Il sait ce qui ne va pas\n
+			Ah, sacré papa\n
+			Dis-moi, où es-tu caché?\n
+			Ça doit faire au moins mille fois que j\'ai\n
+			Compté mes doigts\n
+			Hey\n
+			Où est ton papa?\n
+			Dis-moi, où est ton papa?\n
+			Sans même devoir lui parler\n
+			Il sait ce qui ne va pas\n
+			Ah, sacré papa\n
+			Dis-moi, où es-tu caché?\n
+			Ça doit faire au moins mille fois que j\'ai\n
+			Compté mes doigts\n
+			Hey\n
+			Où t\'es, papaoutai?\n
+			Où t\'es, papaoutai?\n
+			Où t\'es, papaoutai?\n
+			Où t\'es, où t\'es où, papaoutai?\n
+			Où t\'es, papaoutai?\n
+			Où t\'es, papaoutai?\n
+			Où t\'es, papaoutai?\n
 			Où t\'es, où t\'es où, papaoutai?
 			', 'Pop', 'Francês'),
 			('Since I´ve Been Loving You', 'Led Zeppelin',
@@ -302,44 +150,8 @@ values		('Tom Sawyer', 'Rush', 'A modern-day warrior\n
 			I\'m about to lose, I\'m about lose to my worried mind',
 			'Rock', 'Inglês');
             
-insert into traducao (fkmusica, letra, idioma) 
-values		(100, 'Um guerreiro dos dias modernos
-			Significa um grande passo
-			O Tom Sawyer moderno
-			Significa orgulho
-			Embora sua mente não esteja à venda
-			Não o diga arrogante
-			Seu jeito reservado, uma defesa silenciosa
-			Levando em frente os eventos do dia
-			O rio
-			O que você diz sobre sua companhia
-			É o que você diz sobre sociedade
-			Pegue a névoa, pegue o mito
-			Pegue o mistério, pegue a traição
-			O mundo é, o mundo é
-			Amor e vida são profundos
-			Talvez como seus céus são largos
-			O Tom Sawyer moderno
-			Ele se liga em você
-			E o espaço que ele invade
-			Começa perto de você
-			Não, sua mente não está à venda
-			Para nenhum deus ou governo
-			Sempre esperançoso, ainda que descontente
-			Ele sabe que mudanças não são permanentes
-			Mas que mudar é
-			E o que você diz sobre sua companhia
-			É o que você diz sobre sociedade
-			Pegue a testemunha, pegue a sagacidade
-			Pegue o espírito, pegue o cuspe
-			O mundo é, o mundo é
-			Amor e vida são profundos
-			Talvez como seus olhos são largos
-			Saia o guerreiro
-			O Tom Sawyer moderno
-			Ele se liga em você
-			E a energia que você troca
-			Ele fica ligado na fricção do dia', 'Português'),
+insert into traducao (fkmusica, letra_trad, idioma) 
+values		(100, 'Um guerreiro dos dias modernos\nSignifica um grande passo\nO Tom Sawyer moderno\nSignifica orgulho\nEmbora sua mente não esteja à venda\nNão o diga arrogante\nSeu jeito reservado, uma defesa silenciosa\nLevando em frente os eventos do dia\nO rio\nO que você diz sobre sua companhia\nÉ o que você diz sobre sociedade\nPegue a névoa, pegue o mito\nPegue o mistério, pegue a traição\nO mundo é, o mundo é\nAmor e vida são profundos\nTalvez como seus céus são largos\nO Tom Sawyer moderno\nEle se liga em você\nE o espaço que ele invade\nComeça perto de você\nNão, sua mente não está à venda\nPara nenhum deus ou governo\nSempre esperançoso, ainda que descontente\nEle sabe que mudanças não são permanentes\nMas que mudar é\nE o que você diz sobre sua companhia\nÉ o que você diz sobre sociedade\nPegue a testemunha, pegue a sagacidade\nPegue o espírito, pegue o cuspe\nO mundo é, o mundo é\nAmor e vida são profundos\nTalvez como seus olhos são largos\nSaia o guerreiro\nO Tom Sawyer moderno\nEle se liga em você\nE a energia que você troca\nEle fica ligado na fricção do dia', 'Português'),
 			(101, 'Amor, Você Deveria Ter Vindo Pra Cá
 			Olhando pela porta, eu vejo a chuva
 			Que cai nos lutos fúnebres
