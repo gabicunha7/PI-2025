@@ -21,7 +21,8 @@ function exibirLetraMusica() {
 let listaDadosBanco = [];
 
    function exibirLetraMusica() {
-     fetch(`/aquarios/letra/${sessionStorage.getItem("ID_MUSICA")}`, {
+      let idMusica = sessionStorage.getItem("ID_MUSICA")
+     fetch(`/aquarios/letra/${idMusica}`, {
        method: "GET",
      })
        .then(function (resposta) {
@@ -29,14 +30,53 @@ let listaDadosBanco = [];
             letras.forEach((letra) => {
                   listaDadosBanco.push(letra);
 
-             console.log("listaEmpresasCadastradas")
+             console.log("listaBD")
              console.log(listaDadosBanco[0])
           });
          });
        })
        .catch(function (resposta) {
-         console.log(`#ERRO: ${resposta}`);
+         console.log(`#ERRO: ${resposta}`);;
        });
+  }
+
+  function buscarPeloId() {
+      fetch(`/usuarios/${buscaInput.value}`, {
+        method: "GET"
+      })
+        .then(res => {
+          res.json().then(json => {
+            const usuario = json[0];
+            container.innerHTML = `<div>
+      <h1>${usuario.nome} - ${usuario.email}</h1>
+      <img src='assets/${usuario.imagem_perfil}' alt="imagem de usuario">
+    </div>`
+          })
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    }
+
+
+function obterdados(idAquario) {
+      fetch(`/medidas/tempo-real/${idAquario}`)
+          .then(resposta => {
+              if (resposta.status == 200) {
+                  resposta.json().then(resposta => {
+  
+                      console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+  
+                      alertar(resposta, idAquario);
+                  });
+              } else {
+                  console.error(`Nenhum dado encontrado para o id ${idAquario} ou erro na API`);
+              }
+          })
+          .catch(function (error) {
+              console.error(`Erro na obtenção dos dados do aquario p/ gráfico: ${error.message}`);
+          });
+  
   }
 
       /// percorrer dado do sql, distribuir em traducao e original, colocando lado a lado

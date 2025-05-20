@@ -60,6 +60,8 @@ function buscarMusicas(req, res) {
 }
 
 function buscarLetraMusica(req, res) {
+  var idMusica = req.params.idMusica;
+  console.log(idMusica,'ID do contoller')
   aquarioModel.buscarMusicaPorID(idMusica).then((resultado) => {
     if (resultado.length > 0) {
       console.log(resultado);
@@ -73,6 +75,7 @@ function buscarLetraMusica(req, res) {
     res.status(500).json(erro.sqlMessage);
   });
 }
+
 
 module.exports = {
   buscarAquariosPorEmpresa,
