@@ -45,6 +45,9 @@ function exibirLetraMusica() {
             letra_traducao.innerHTML += `<p class="traducao" lang="en">${trechosTrad[i]}</p>`;
           }
 
+          titulo.innerHTML = listaDadosBanco[0].nome;
+          artista.innerHTML = listaDadosBanco[0].artista;
+
 
         });
       });

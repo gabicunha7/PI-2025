@@ -56,89 +56,8 @@ insert into musica (nome, artista, letra, genero, idioma)
 values		('Tom Sawyer', 'Rush', 'A modern-day warrior\nMean, mean stride\nToday\'s Tom Sawyer\nMean, mean pride\nThough his mind is not for rent\nDon\'t put him down as arrogant\nHis reserve, a quiet defense\nRiding out the day\'s events\nThe river\nWhat you say about his company\nIs what you say about society\nCatch the mist, catch the myth\nCatch the mystery, catch the drift\nThe world is, the world is\nLove and life are deep\nMaybe as his skies are wide\nToday\'s Tom Sawyer\nHe gets high on you\nAnd the space he invades\nHe gets by on you\nNo, his mind is not for rent\nTo any god or government\nAlways hopeful, yet discontent\nHe knows changes aren\'t permanent\nBut change is\nAnd what you say about his company\nIs what you say about society\nCatch the witness, catch the wit\nCatch the spirit, catch the spit\nThe world is, the world is\nLove and life are deep\nMaybe as his eyes are wide\nExit the warrior\nToday\'s Tom Sawyer\nHe gets high on you\nAnd the energy you trade\nHe gets right on to the friction of the day\n', 'Rock', 'Inglês'),
 			('Lover, You Should’ve Come Over', 'Jeff Buckley', 'Looking out the door I see the rain\nFall upon the funeral mourners\nParading in a wake of sad relations\nAs their shoes fill up with water\nMaybe I\'m too young\nTo keep good love from going wrong\nBut tonight you\'re on my mind\nSo... you\'ll never know\nBroken down and hungry for your love\nWith no way to feed it\nWhere are you tonight?\nChild, ya know how much I need it\nToo young to hold on\nAnd too old to just break free and run\nSometimes a man gets carried away\nWhen he feels like should be having his fun\nMuch too blind to see the damage he\'s done\nSometimes a man must awake to find that\nReally he has no one\nSo I\'ll wait for you, love\nAnd I\'ll burn\nWill I ever see your sweet return?\nOh, will I ever learn?\nOh-oh, lover, you should\'ve come over\n\'Cause it\'s not too late\nLonely is the room, the bed is made\nThe open window lets the rain in\nBurning in the corner is the only one who dreams\nHe had you with him\nMy body turns\nAnd yearns for a sleep that won\'t ever come\nIt\'s never over\nMy kingdom for a kiss upon her shoulder\nIt\'s never over\nAll my riches for her smiles\nWhen I\'ve slept so soft against her\nIt\'s never over\nAll my blood for the sweetness of her laughter\nIt\'s never over\nShe is the tear that hangs inside my soul forever\nOh, but maybe I\'m just too young\nTo keep good love from going wrong\nOh-oh-oh, lover\nYou should\'ve come over, yeah, yes\nYes, I feel too young to hold on\nAnd much too old to break free and run\nToo deaf, dumb and blind to see the damage I\'ve done\nSweet lover, you should\'ve come over\nOh, love, well I\'ve waited for you\nLover, lover, lover\nLover, love, love, love, love, love, love!\nLover, you should\'ve come over\n\'Cause it\'s not too late\n', 'Alternativo', 'Inglês'),
 			('Wuthering Heights', 'Kate Bush', 'Out on the wily, windy moors\nWe\'d roll and fall in green\nYou had a temper like my\njealousy\nToo hot, too greedy\nHow could you leave me\nWhen I needed to possess you?\nI hated you, I loved you too\nBad dreams in the night\nThey told me I was going to lose the fight\nLeave behind my Wuthering, Wuthering\nWuthering Heights\nHeathcliff, it\'s me, I\'m Cathy\nI\'ve come home, I\'m so cold\nLet me in your window\nHeathcliff, it\'s me I\'m Cathy\nI\'ve come home, I\'m so cold\nLet me in your window\nOoh, it gets dark, it gets lonely\nOn the other side from you\nI pine a lot, I find the lot\nFalls through without you\nI\'m coming back love, cruel Heathcliff\nMy one dream, my only master\nToo long I roam in the night\nI\'m coming back to his side to put it right\nI\'m coming home to wuthering, wuthering\nWuthering Heights\nHeathcliff, it\'s me, I\'m Cathy\nI\'ve come home, I\'m so cold\nLet me in your window\nHeathcliff, it\'s me, I\'m Cathy\nI\'ve come home, I\'m so cold\nLet me in your window\nOoh, let me have it\nLet me grab your soul away\nOoh, let me have it\nLet me grab your soul away\nYou know it\'s me, Cathy\nHeathcliff, it\'s me I\'m Cathy\nI\'ve come home, I\'m so cold\nLet me in your window\nHeathcliff, it\'s me, I\'m Cathy\nI\'ve come home, I\'m so cold\nLet me in your window\nHeathcliff, it\'s me, I\'m Cathy\nI\'ve come home, I\'m so cold', 'Pop', 'Inglês'),
-			('Papaoutai', 'Stromae','Dites-moi d\'où il vient\nEnfin je saurai où je vais\nMaman dit que lorsqu\'on cherche bien\nOn finit toujours par trouver\nElle dit qu\'il n\'est jamais très loin\nQu\'il part très souvent travailler\nMaman dit "travailler, c\'est bien"\nBien mieux qu\'être mal accompagné\nPas vrai?\nOù est ton papa?\nDis-moi, où est ton papa?\nSans même devoir lui parler\nIl sait ce qui ne va pas\nAh, sacré papa\nDis-moi, où es-tu caché?\nÇa doit faire au moins mille fois que j\'ai\nCompté mes doigts\nHey\nOù t\'es, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, où t\'es où, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, où t\'es où, papaoutai?\nQuoi? Qu\'on y croie ou pas\nY aura bien un jour où on n\'y croira plus\nUn jour ou l\'autre, on sera tous papas\nEt d\'un jour à l\'autre, on aura disparu\n
-			Serons-nous détestables?\n
-			Serons-nous admirables?\n
-			Des géniteurs ou des génies?\n
-			Dites-nous qui donne naissance aux irresponsables?\n
-			Ah, dites-nous qui?\n
-			Tiens, tout le monde sait comment on fait des bébés\n
-			Mais personne sait comment on fait des papas\n
-			Monsieur je-sais-tout en aurait hérité, c\'est ça\n
-			Faut l\'sucer d\'son pouce ou quoi?\n
-			Dites-nous où c\'est caché, ça doit\n
-			Faire au moins mille fois qu\'on a\n
-			Bouffé nos doigts\n
-			Hey\n
-			Où t\'es, papaoutai?\n
-			Où t\'es, papaoutai?\n
-			Où t\'es, papaoutai?\n
-			Où t\'es, où t\'es où, papaoutai?\n
-			Où t\'es, papaoutai?\n
-			Où t\'es, papaoutai?\n
-			Où t\'es, papaoutai?\n
-			Où t\'es, où t\'es où, papaoutai?\n
-			Où est ton papa?\n
-			Dis-moi, où est ton papa?\n
-			Sans même devoir lui parler\n
-			Il sait ce qui ne va pas\n
-			Ah, sacré papa\n
-			Dis-moi, où es-tu caché?\n
-			Ça doit faire au moins mille fois que j\'ai\n
-			Compté mes doigts\n
-			Hey\n
-			Où est ton papa?\n
-			Dis-moi, où est ton papa?\n
-			Sans même devoir lui parler\n
-			Il sait ce qui ne va pas\n
-			Ah, sacré papa\n
-			Dis-moi, où es-tu caché?\n
-			Ça doit faire au moins mille fois que j\'ai\n
-			Compté mes doigts\n
-			Hey\n
-			Où t\'es, papaoutai?\n
-			Où t\'es, papaoutai?\n
-			Où t\'es, papaoutai?\n
-			Où t\'es, où t\'es où, papaoutai?\n
-			Où t\'es, papaoutai?\n
-			Où t\'es, papaoutai?\n
-			Où t\'es, papaoutai?\n
-			Où t\'es, où t\'es où, papaoutai?
-			', 'Pop', 'Francês'),
-			('Since I´ve Been Loving You', 'Led Zeppelin',
-			'Working from seven to eleven every night
-			It really makes life a drag, I don\'t think that\'s right
-			I\'ve really, been the best, the best of fools
-			I did what I could, yeah
-			\'Cause I love you, baby
-			How I love you, darling
-			How I love you, baby
-			How I love you, girl, little girl
-			Baby, since I\'ve been loving you, yeah
-			I\'m about to lose my worried mind, oh yeah
-			Everybody trying to tell me
-			That you didn\'t mean me no good
-			I\'ve been trying, Lord, let me tell you
-			Let me tell you I really did the best I could
-			I\'ve been working from seven to eleven every night
-			I said it kinda makes my life a drag, drag, drag, drag,
-			Lord, that ain\'t right
-			Since I\'ve been loving you
-			I\'m about to lose my worried mind
-			Said I\'ve been crying, my tears they fell like rain
-			Don\'t you hear, don\'t you hear them falling
-			Do you remember, mama, when I knocked upon your door?
-			I said you had the nerve to tell me
-			you didn\'t want me no more, yeah
-			I open my front door,
-			hear my back door slam
-			You must have one of them new fangled back door man
-			I\'ve been working from seven, seven, seven,
-			to eleven every night
-			It kinda makes my life a drag, drag, drag
-			Baby, since I\'ve been loving you
-			I\'m about to lose, I\'m about lose to my worried mind',
-			'Rock', 'Inglês');
+			('Papaoutai', 'Stromae','Dites-moi d\'où il vient\nEnfin je saurai où je vais\nMaman dit que lorsqu\'on cherche bien\nOn finit toujours par trouver\nElle dit qu\'il n\'est jamais très loin\nQu\'il part très souvent travailler\nMaman dit "travailler, c\'est bien"\nBien mieux qu\'être mal accompagné\nPas vrai?\nOù est ton papa?\nDis-moi, où est ton papa?\nSans même devoir lui parler\nIl sait ce qui ne va pas\nAh, sacré papa\nDis-moi, où es-tu caché?\nÇa doit faire au moins mille fois que j\'ai\nCompté mes doigts\nHey\nOù t\'es, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, où t\'es où, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, où t\'es où, papaoutai?\nQuoi? Qu\'on y croie ou pas\nY aura bien un jour où on n\'y croira plus\nUn jour ou l\'autre, on sera tous papas\nEt d\'un jour à l\'autre, on aura disparu\nSerons-nous détestables?\nSerons-nous admirables?\nDes géniteurs ou des génies?\nDites-nous qui donne naissance aux irresponsables?\nAh, dites-nous qui?\nTiens, tout le monde sait comment on fait des bébés\nMais personne sait comment on fait des papas\nMonsieur je-sais-tout en aurait hérité, c\'est ça\nFaut l\'sucer d\'son pouce ou quoi?\nDites-nous où c\'est caché, ça doit\nFaire au moins mille fois qu\'on a\nBouffé nos doigts\nHey\nOù t\'es, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, où t\'es où, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, où t\'es où, papaoutai?\nOù est ton papa?\nDis-moi, où est ton papa?\nSans même devoir lui parler\nIl sait ce qui ne va pas\nAh, sacré papa\nDis-moi, où es-tu caché?\nÇa doit faire au moins mille fois que j\'ai\nCompté mes doigts\nOù est ton papa?\nDis-moi, où est ton papa?\nSans même devoir lui parler\nIl sait ce qui ne va pas\nAh, sacré papa\nDis-moi, où es-tu caché?\nÇa doit faire au moins mille fois que j\'ai\nCompté mes doigts\nOù t\'es, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, où t\'es où, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, papaoutai?\nOù t\'es, où t\'es où, papaoutai?', 'Pop', 'Francês'),
+			('Since I´ve Been Loving You', 'Led Zeppelin','Working from seven to eleven every night\nIt really makes life a drag, I don\'t think that\'s right\nI\'ve really, been the best, the best of fools\nI did what I could, yeah\n\'Cause I love you, baby\nHow I love you, darling\nHow I love you, baby\nHow I love you, girl, little girl\nBaby, since I\'ve been loving you, yeah\nI\'m about to lose my worried mind, oh yeah\nEverybody trying to tell me\nThat you didn\'t mean me no good\nI\'ve been trying, Lord, let me tell you\nLet me tell you I really did the best I could\nI\'ve been working from seven to eleven every night\nI said it kinda makes my life a drag, drag, drag, drag,\nLord, that ain\'t right\nSince I\'ve been loving you\nI\'m about to lose my worried mind\nSaid I\'ve been crying, my tears they fell like rain\nDon\'t you hear, don\'t you hear them falling\nDo you remember, mama, when I knocked upon your door?\nI said you had the nerve to tell me\nyou didn\'t want me no more, yeah\nI open my front door,\nhear my back door slam\nYou must have one of them new fangled back door man\nI\'ve been working from seven, seven, seven,\nto eleven every night\nIt kinda makes my life a drag, drag, drag\nBaby, since I\'ve been loving you\nI\'m about to lose\nI\'m about lose to my worried mind\n','Rock', 'Inglês');
             
 insert into traducao (fkmusica, letra_trad, idioma) 
 values		(100, 'Um guerreiro dos dias modernos\nSignifica um grande passo\nO Tom Sawyer moderno\nSignifica orgulho\nEmbora sua mente não esteja à venda\nNão o diga arrogante\nSeu jeito reservado, uma defesa silenciosa\nLevando em frente os eventos do dia\nO rio\nO que você diz sobre sua companhia\nÉ o que você diz sobre sociedade\nPegue a névoa, pegue o mito\nPegue o mistério, pegue a traição\nO mundo é, o mundo é\nAmor e vida são profundos\nTalvez como seus céus são largos\nO Tom Sawyer moderno\nEle se liga em você\nE o espaço que ele invade\nComeça perto de você\nNão, sua mente não está à venda\nPara nenhum deus ou governo\nSempre esperançoso, ainda que descontente\nEle sabe que mudanças não são permanentes\nMas que mudar é\nE o que você diz sobre sua companhia\nÉ o que você diz sobre sociedade\nPegue a testemunha, pegue a sagacidade\nPegue o espírito, pegue o cuspe\nO mundo é, o mundo é\nAmor e vida são profundos\nTalvez como seus olhos são largos\nSaia o guerreiro\nO Tom Sawyer moderno\nEle se liga em você\nE a energia que você troca\nEle fica ligado na fricção do dia\n', 'Português'),
@@ -335,16 +254,16 @@ values		(100, 'Um guerreiro dos dias modernos\nSignifica um grande passo\nO Tom 
 			Disse que tenho chorado. Minhas lágrimas parecem chuva,
 			Você não ouve, você não as ouve cair?
 			Você se lembra mulher, quando eu bati em sua porta?
-			Eu disse que você se atreveu a me falar
-			que não me queria mais, é
-			Eu abro minha porta da frente,
-			e escuto minha porta dos fundos bater,
-			Você deve ter um desses amantes mais jovens.
-			Eu tenho trabalhado das sete, das sete, das sete às onze
-			todas as noites, isto meio que faz da minha vida um saco...
-			Baby, desde que andei amando você,
-			estou a ponto de perder, estou
-			a ponto de perder minha mente angustiada', 'Português');
+			Eu disse que você se atreveu a me falar\n
+			que não me queria mais, é\n
+			Eu abro minha porta da frente,\n
+			e escuto minha porta dos fundos bater,\n
+			Você deve ter um desses amantes mais jovens.\n
+			Eu tenho trabalhado das sete, das sete, das sete às onze\n
+			todas as noites, isto meio que faz da minha vida um saco...\n
+			Baby, desde que andei amando você,\n
+			estou a ponto de perder\n
+			estou a ponto de perder minha mente angustiada\n', 'Português');
             
 insert into comentario (texto, avaliacao, fkusuario, fktraducao) 
 values		('Tradução ótima', 5, 2, 1),
