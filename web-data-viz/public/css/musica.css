@@ -14,24 +14,34 @@ body {
 }
 
 .conteudo {
-	display: grid;
+	display: flex;
+	flex-direction: row;
 	grid-template-columns: 1fr 1fr; /* duas colunas de larguras iguais */
 	gap: 0.5em;   
 }
 
+.LetraMusica{
+	width: 50%;
+
+}
+
+.TraduçãoMusica{
+	width: 50%;
+
+}
+
 .original {
 	color: var(--azul);
-	font-size: 20px;
-	flex: 0 0 50%;             
+	font-size: 20px;        
 	text-align: center;         
 }
 .original:hover {
 	background-color: #1d110b23;
 }
+
 .traducao {
 	color: var(--azul);
-	font-size: 20px;
-	flex: 0 0 50%;             
+	font-size: 20px;         
 	text-align: center;         
 }
 .traducao:hover {

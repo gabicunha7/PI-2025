@@ -20,7 +20,7 @@ idioma varchar(45) not null
 create table traducao(
 id int primary key auto_increment,
 fkmusica int unique not null,
-letra mediumtext not null,
+letra_trad mediumtext not null,
 idioma varchar(45) not null,
 constraint fk_musica foreign key(fkmusica) references musica(id)
 );
@@ -60,8 +60,8 @@ values		('Tom Sawyer', 'Rush', 'A modern-day warrior\n
 			The world is, the world is\n
 			Love and life are deep\n
 			Maybe as his skies are wide\n
-			Today\'s Tom Sawyer, he gets high on you\n
-			And the space he invades, he gets by on you\n
+			Today\'s Tom Sawyer\nHe gets high on you\n
+			And the space he invades\nHe gets by on you\n
 			No, his mind is not for rent\n
 			To any god or government\n
 			Always hopeful, yet discontent\n
@@ -78,8 +78,7 @@ values		('Tom Sawyer', 'Rush', 'A modern-day warrior\n
 			Today\'s Tom Sawyer\n
 			He gets high on you\n
 			And the energy you trade\n
-			He gets right on to\n
-			The friction of the day\n', 'Rock', 'English'),
+			He gets right on to the friction of the day\n', 'Rock', 'English'),
 			('Lover, You Should’ve Come Over', 'Jeff Buckley', 'Looking out the door I see the rain\n
 			Fall upon the funeral mourners\n
 			Parading in a wake of sad relations\n
