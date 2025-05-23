@@ -74,7 +74,7 @@ function usuarioMaisComenta() {
 
 function buscarGraficoPizza() {
 
-    var instrucaoSql = `select u.genfav, count(genfav) quantidade
+    var instrucaoSql = `select u.genfav 'Gênero Favorito', count(genfav) Quantidade
     from usuario u
     group by u.genfav;`;
 
