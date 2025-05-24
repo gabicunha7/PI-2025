@@ -67,7 +67,7 @@ body {
 	font-size: 20px;
 }
 
-.comentario {
+.sessao_comentarios {
 	margin-top: 5rem;
 	margin-bottom: 5rem;
 }
@@ -120,7 +120,7 @@ body {
 	color: var(--amarelo-claro);
 }
 
-.comentario button {
+.sessao_comentarios button {
 	color: var(--amarelo-claro);
 	border: none;
 	font-size: 20px;
@@ -131,7 +131,48 @@ body {
 	background-color: var(--azul);
 }
 
-.comentario button:hover {
+.sessao_comentarios button:hover {
 	background-color: #fa702bdb;
 	transition: 0.5s;
+}
+
+.comentarios {
+	width: 1005;
+	height: fit-content;
+	margin-bottom: 4rem;
+}
+.comentario {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-top: 2rem;
+	padding: 1rem;
+	background-color: #fff4b79f;
+	width: 80%;
+	border-radius: 15px;
+}
+
+#sobre_user {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#sobre_user svg {
+	width: 20px;
+	color: var(--amarelo-escuro);
+}
+
+#sobre_user p {
+	font-size: 25px;
+}
+
+.comentario h1 {
+	color: var(--azul-escuro);
+}
+
+.comentario p {
+	color: var(--azul);
+	font-size: 20px;
+	font-weight: 500;
 }

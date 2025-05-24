@@ -41,11 +41,31 @@ function buscarMusicaPorID(idMusica) {
   return database.executar(instrucaoSql);
 }
 
+function buscaComentarioPorMusica(idMusica) {
+  console.log(idMusica, 'ID do model')
+  var instrucaoSql = `select u.nome, c.avaliacao, c.texto, c.id
+                        from comentario c 
+                        inner join usuario u
+                            on c.fkusuario = u.id
+                        inner join traducao t
+                            on c.fktraducao = t.id
+                        inner join musica m
+                            on t.fkmusica = m.id
+                        where m.id = ${idMusica};`
+
+  console.log("Executando a instrução SQL: \n" + instrucaoSql);
+  return database.executar(instrucaoSql);
+}
+
+
+
 
 
 module.exports = {
   buscarAquariosPorEmpresa,
   cadastrar,
   buscarMusicas,
-  buscarMusicaPorID
+  buscarMusicaPorID,
+  buscaComentarioPorMusica
+
 }

@@ -86,8 +86,7 @@ function buscarMedidasEmTempoReal() {
 
     var instrucaoSql = `select u.genfav genfav, count(genfav) quantidade
                         from usuario u
-                        group by u.genfav
-                        ORDER BY id DESC LIMIT 1;`;
+                        group by u.genfav;`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

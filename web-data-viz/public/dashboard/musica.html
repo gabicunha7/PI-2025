@@ -36,10 +36,10 @@
 		</section>
 		<section class="conteudo" id="conteudo">
 			<div class="LetraMusica" id="letra_musica"></div>
-			<div class="TraduçãoMusica" id="letra_traducao"></div>       
+			<div class="TraduçãoMusica" id="letra_traducao"></div>
 		</section>
 
-		<section class="comentario">
+		<section class="sessao_comentarios">
 			<ul class="avaliar">
 				<li class="star-icon ativo" data-avaliar="1"></li>
 				<li class="star-icon" data-avaliar="2"></li>
@@ -50,6 +50,9 @@
 			</ul>
 			<input type="text" placeholder="Faça seu comentário: " class="ipt_comentario" maxlength="50">
 			<button>Enviar</button>
+			<div id="caixa_comentarios" class="comentarios">
+				
+			</div>
 		</section>
 	</main>
 
@@ -92,6 +95,7 @@
 </body>
 
 <script>
-	window.onload = exibirLetraMusica();
+	window.onload = exibirLetraMusica(), buscarComentarioPeloId();
 </script>
+
 </html>

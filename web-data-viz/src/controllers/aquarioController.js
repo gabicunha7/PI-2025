@@ -76,10 +76,28 @@ function buscarLetraMusica(req, res) {
   });
 }
 
+function buscaComentarioPorMusica(req, res) {
+  var idMusica = req.params.idMusica;
+  console.log(idMusica,'ID do contoller')
+  aquarioModel.buscaComentarioPorMusica(idMusica).then((resultado) => {
+    if (resultado.length > 0) {
+      console.log(resultado);
+      res.status(200).json(resultado);
+    } else {
+      res.status(204).json([]);
+    }
+  }).catch(function (erro) {
+    console.log(erro);
+    console.log("Houve um erro ao buscar comentarios música: ", erro.sqlMessage);
+    res.status(500).json(erro.sqlMessage);
+  });
+}
+
 
 module.exports = {
   buscarAquariosPorEmpresa,
   cadastrar,
   buscarMusicas,
-  buscarLetraMusica
+  buscarLetraMusica,
+  buscaComentarioPorMusica
 }

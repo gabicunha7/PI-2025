@@ -14,6 +14,9 @@ router.get("/musicas", function (req, res) {
 router.get("/letra/:idMusica", function (req, res) {
   aquarioController.buscarLetraMusica(req, res);
 });
+router.get("/comentarios/:idMusica", function (req, res) {
+  aquarioController.buscaComentarioPorMusica(req, res);
+});
 
 router.post("/cadastrar", function (req, res) {
   aquarioController.cadastrar(req, res);
