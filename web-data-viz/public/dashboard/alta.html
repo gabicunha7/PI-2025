@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Em alta</title>
 	<link rel="shortcut icon" href="../assets/imgs/logo.png" type="image/x-icon">
-	<link rel="stylesheet" href="../css/traduzir.css">
+	<link rel="stylesheet" href="../css/alta.css">
 	<link rel="stylesheet" href="../css/header_footer.css">
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script src="../js/sessao.js"></script>
@@ -161,13 +161,32 @@
 				label: 'Quantidade pessoas: ',
 				data: [],
 				backgroundColor: [
-				'rgb(255, 99, 132)',
-				'rgb(54, 162, 235)',
-				'rgb(255, 205, 86)',
-				'rgb(54, 189, 235)',
-				'rgb(255, 100, 86)']
+					'#FFF4B7',
+					'#006A67',
+					'#fff',
+					'#f76014',
+					'#f8bf2d']
+			}]
+		};
+		let opcoes = {
+			responsive: true,
+			plugins: {
+				legend: {
+					display: true,
+					position: 'top',
+					labels: {
+						color: '#fff'
+					}
+				},
+				title: {
+					display: true,
+					text: 'Gêneros favoritos e suas quantidades',
+					color: '#fff',
+					font: {
+						size: 20
+					}
+				}
 			}
-		    ]
 		};
 
 		console.log('----------------------------------------------')
@@ -195,6 +214,7 @@
 		const config = {
 			type: 'pie',
 			data: dados,
+			options: opcoes
 		};
 
 		// Adicionando gráfico criado em div na tela
@@ -217,7 +237,7 @@
 					console.log(`Dados atuais do gráfico:`);
 					console.log(dados);
 
-					let avisoCaptura = document.getElementById(`avisoCaptura nova executada`)
+					let avisoCaptura = document.getElementById(`avisoCaptura`)
 					avisoCaptura.innerHTML = ""
 
 
