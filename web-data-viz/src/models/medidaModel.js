@@ -15,7 +15,7 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
     return database.executar(instrucaoSql);
 }
 
-function buscarMedidasEmTempoReal(idAquario) {
+function buscarMedidasEmTempoRealaquario(idAquario) {
 
     var instrucaoSql = `SELECT 
         dht11_temperatura as temperatura, 
@@ -74,7 +74,7 @@ function usuarioMaisComenta() {
 
 function buscarGraficoPizza() {
 
-    var instrucaoSql = `select u.genfav 'Gênero Favorito', count(genfav) Quantidade
+    var instrucaoSql = `select u.genfav genfav, count(genfav) quantidade
     from usuario u
     group by u.genfav;`;
 
@@ -82,6 +82,16 @@ function buscarGraficoPizza() {
     return database.executar(instrucaoSql);
 }
 
+function buscarMedidasEmTempoReal() {
+
+    var instrucaoSql = `select u.genfav genfav, count(genfav) quantidade
+                        from usuario u
+                        group by u.genfav
+                        ORDER BY id DESC LIMIT 1;`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
 
 
 
