@@ -90,6 +90,7 @@ function buscarComentarioPeloId() {
       console.log(`#ERRO: ${resposta}`);;
     });
 }
+
 function comentar() {
   var idUsuario = sessionStorage.ID_USUARIO;
 
@@ -113,8 +114,7 @@ function comentar() {
     console.log("resposta: ", resposta);
 
     if (resposta.ok) {
-      console.log('comentario por :', idUsuario);
-      // window.location = "/dashboard/musica.html";
+      window.location = "/dashboard/musica.html";
       limparFormulario();
       buscarComentarioPeloId();
       return false;

@@ -51,7 +51,7 @@ function comentar(req, res) {
 
 
 function buscarMusicas(req, res) {
-  aquarioModel.buscarMusicas.then((resultado) => {
+  aquarioModel.buscarMusicas().then((resultado) => {
     if (resultado.length > 0) {
       console.log(resultado);
       res.status(200).json(resultado);

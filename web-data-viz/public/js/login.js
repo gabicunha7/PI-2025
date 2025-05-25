@@ -40,7 +40,7 @@ function entrar() {
 				sessionStorage.NOME_USUARIO = json.nome;
 				sessionStorage.EMAIL_USUARIO = json.email;
 				sessionStorage.FAVORITO_USUARIO = json.genFav;
-				sessionStorage.MUSICAS = JSON.stringify(json.musicas)
+				// sessionStorage.MUSICAS = JSON.stringify(json.musicas)
 
 				setTimeout(function () {
 					window.location = "./dashboard/bemvindo.html";
