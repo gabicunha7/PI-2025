@@ -17,25 +17,31 @@ function buscarAquariosPorEmpresa(req, res) {
 }
 
 
-function cadastrar(req, res) {
-  var descricao = req.body.descricao;
-  var idUsuario = req.body.idUsuario;
+function comentar(req, res) {
+  var texto = req.body.texto;
+  var idUsuario = req.params.idUsuario;
+  var avaliacao = req.body.avaliacao;
+  var idTraducao = req.body.idTraducao;
 
-  if (descricao == undefined) {
-    res.status(400).send("descricao está undefined!");
+  if (texto == undefined) {
+    res.status(400).send("texto está undefined!");
+  } else if (avaliacao == undefined) {
+    res.status(400).send("avaliacao está undefined!");
   } else if (idUsuario == undefined) {
     res.status(400).send("idUsuario está undefined!");
-  } else {
+  }else if (idTraducao == undefined) {
+    res.status(400).send("idTraducao está undefined!");
+  }else {
 
 
-    aquarioModel.cadastrar(descricao, idUsuario)
+    aquarioModel.comentar(texto, idUsuario, avaliacao, idTraducao)
       .then((resultado) => {
         res.status(201).json(resultado);
       }
       ).catch((erro) => {
         console.log(erro);
         console.log(
-          "\nHouve um erro ao realizar o cadastro! Erro: ",
+          "\nHouve um erro ao realizar o comentario! Erro: ",
           erro.sqlMessage
         );
         res.status(500).json(erro.sqlMessage);
@@ -96,7 +102,7 @@ function buscaComentarioPorMusica(req, res) {
 
 module.exports = {
   buscarAquariosPorEmpresa,
-  cadastrar,
+  comentar,
   buscarMusicas,
   buscarLetraMusica,
   buscaComentarioPorMusica

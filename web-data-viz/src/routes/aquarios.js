@@ -14,12 +14,13 @@ router.get("/musicas", function (req, res) {
 router.get("/letra/:idMusica", function (req, res) {
   aquarioController.buscarLetraMusica(req, res);
 });
+
 router.get("/comentarios/:idMusica", function (req, res) {
   aquarioController.buscaComentarioPorMusica(req, res);
 });
 
-router.post("/cadastrar", function (req, res) {
-  aquarioController.cadastrar(req, res);
+router.post("/musicas/comentar/:idUsuario", function (req, res) {
+  aquarioController.comentar(req, res);
 })
 
 module.exports = router;

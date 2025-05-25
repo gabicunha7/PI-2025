@@ -39,7 +39,7 @@
 			<div class="TraduçãoMusica" id="letra_traducao"></div>
 		</section>
 
-		<section class="sessao_comentarios">
+		<form class="sessao_comentarios" id="sessao_comentarios">
 			<ul class="avaliar">
 				<li class="star-icon ativo" data-avaliar="1"></li>
 				<li class="star-icon" data-avaliar="2"></li>
@@ -48,12 +48,12 @@
 				<li class="star-icon" data-avaliar="5"></li>
 
 			</ul>
-			<input type="text" placeholder="Faça seu comentário: " class="ipt_comentario" maxlength="50">
-			<button>Enviar</button>
+			<input type="text" placeholder="Faça seu comentário: " class="ipt_comentario" id="ipt_comentario" maxlength="50">
+			<button onclick="comentar()">Enviar</button>
 			<div id="caixa_comentarios" class="comentarios">
 				
 			</div>
-		</section>
+		</form>
 	</main>
 
 	<footer>

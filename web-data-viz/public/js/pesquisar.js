@@ -21,7 +21,7 @@ function exibirAquarios() {
 function exibirMusicas() {
 	JSON.parse(sessionStorage.MUSICAS).forEach(item => {
 		document.getElementById("card_musicas").innerHTML += `
-		<div class="card" onclick="pegarID(${item.id})">
+		<div class="card" onclick="pegarID(${item.id}, ${item.tid})">
 			<div class="card_left">
 				<a href="musica.html">${item.nome}</a>
 				<p>${item.artista}</p>
@@ -37,6 +37,7 @@ function exibirMusicas() {
 	});
 }
 
-function pegarID(idMusica){
+function pegarID(idMusica, idTraducao){
 	sessionStorage.ID_MUSICA = idMusica;
+	sessionStorage.ID_TRADUCAO = idTraducao;
 }

@@ -17,7 +17,7 @@
 // 		</div>`
 //   });
 // }
-
+let valorEstrela = null;
 let listaDadosBanco = [];
 let listaComentarios = [];
 
@@ -69,7 +69,7 @@ function buscarComentarioPeloId() {
           console.log("listaComentarios");
           console.log(listaComentarios);
         });
-        for(let i = 0; i < listaComentarios.length; i++){
+        for (let i = 0; i < listaComentarios.length; i++) {
           console.log('listando um comentario');
           caixa_comentarios.innerHTML += `<div id="comentario" class="comentario">
             <div id="sobre_user">
@@ -90,11 +90,67 @@ function buscarComentarioPeloId() {
       console.log(`#ERRO: ${resposta}`);;
     });
 }
-  
-  
+function comentar() {
+  var idUsuario = sessionStorage.ID_USUARIO;
 
-/// percorrer dado do sql, distribuir em traducao e original, colocando lado a lado
-// ideia, fazer um loop, pegar dados do sql, adicionar na array(cortados pelo \n)
-// e retirar os \ do sql usados para ignorar o '
-// com isso para cada item da array gerar uma tag p com o conteudo dentro...
-// tentarei fazer isso, acho possível
+  if(ipt_comentario.value != undefined && ipt_comentario.value != null && ipt_comentario.value != ''
+    && valorEstrela != undefined && valorEstrela != null && valorEstrela != ''){
+       var corpo = {
+    texto: ipt_comentario.value,
+    avaliacao: valorEstrela,
+    idTraducao: sessionStorage.getItem("ID_TRADUCAO")
+  }
+  console.log('este é o corpo', corpo)
+
+  fetch(`/aquarios/musicas/comentar/${idUsuario}`, {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(corpo)
+  }).then(function (resposta) {
+
+    console.log("resposta: ", resposta);
+
+    if (resposta.ok) {
+      console.log('comentario por :', idUsuario);
+      // window.location = "/dashboard/musica.html";
+      limparFormulario();
+      buscarComentarioPeloId();
+      return false;
+
+    } else if (resposta.status == 404) {
+      window.alert("Deu 404!");
+    } else {
+      throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+    }
+  }).catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+  });
+
+  return false;
+  } else {
+    return alert('preencha o comentário e selecione uma avaliacao.')
+  }
+ 
+}
+
+
+function limparFormulario() {
+  document.getElementById("sessao_comentarios").reset();
+}
+
+document.addEventListener('click', function (e) {
+  var estrelas = e.target.parentElement.getElementsByClassName('star-icon');
+  estrelas = Array.from(estrelas);
+  var classeEstrela = e.target.classList;
+
+  if (!classeEstrela.contains('ativo') && classeEstrela.contains('star-icon')) {
+    estrelas.forEach(function (estrela) {
+      estrela.classList.remove('ativo');
+    });
+    classeEstrela.add('ativo');
+    valorEstrela = e.target.getAttribute('data-avaliar');
+    console.log(e.target.getAttribute('data-avaliar'));
+  }
+})

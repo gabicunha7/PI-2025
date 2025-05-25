@@ -8,16 +8,16 @@ function buscarAquariosPorEmpresa(empresaId) {
   return database.executar(instrucaoSql);
 }
 
-function cadastrar(empresaId, descricao) {
+function comentar(texto, idUsuario, avaliacao, idTraducao) {
 
-  var instrucaoSql = `INSERT INTO (descricao, fk_empresa) aquario VALUES (${descricao}, ${empresaId})`;
+  var instrucaoSql = `INSERT INTO comentario(texto, fkusuario, avaliacao, fktraducao) VALUES ('${texto}', ${idUsuario}, ${avaliacao}, ${idTraducao})`;
 
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
   return database.executar(instrucaoSql);
 }
 
 function buscarMusicas() {
-  var instrucaoSql = `select m.id, m.nome, m.artista, round(avg(c.avaliacao), 1) as avaliacao
+  var instrucaoSql = `select m.id, m.nome, m.artista, round(avg(c.avaliacao), 1) as avaliacao, t.id as tid
                       from musica m
                       inner join traducao t
                           on m.id = t.fkmusica
@@ -63,7 +63,7 @@ function buscaComentarioPorMusica(idMusica) {
 
 module.exports = {
   buscarAquariosPorEmpresa,
-  cadastrar,
+  comentar,
   buscarMusicas,
   buscarMusicaPorID,
   buscaComentarioPorMusica
