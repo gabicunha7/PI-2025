@@ -23,7 +23,7 @@ let listaComentarios = [];
 
 function exibirLetraMusica() {
   let idMusica = sessionStorage.getItem("ID_MUSICA")
-  fetch(`/aquarios/letra/${idMusica}`, {
+  fetch(`/musics/letra/${idMusica}`, {
     method: "GET",
   })
     .then(function (resposta) {
@@ -58,7 +58,7 @@ function exibirLetraMusica() {
 
 function buscarComentarioPeloId() {
   let idMusica = sessionStorage.getItem("ID_MUSICA")
-  fetch(`/aquarios/comentarios/${idMusica}`, {
+  fetch(`/musics/comentarios/${idMusica}`, {
     method: "GET"
   })
     .then(function (resposta) {
@@ -103,7 +103,7 @@ function comentar() {
   }
   console.log('este é o corpo', corpo)
 
-  fetch(`/aquarios/musicas/comentar/${idUsuario}`, {
+  fetch(`/musics/musicas/comentar/${idUsuario}`, {
     method: "post",
     headers: {
       "Content-Type": "application/json"
@@ -114,7 +114,7 @@ function comentar() {
     console.log("resposta: ", resposta);
 
     if (resposta.ok) {
-      window.location = "/dashboard/musica.html";
+      // window.location = "/dashboard/musica.html";
       limparFormulario();
       buscarComentarioPeloId();
       return false;

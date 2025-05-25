@@ -1,9 +1,9 @@
-var aquarioModel = require("../models/aquarioModel");
+var musicModel = require("../models/musicModel");
 
-function buscarAquariosPorEmpresa(req, res) {
+function buscarmusicsPorEmpresa(req, res) {
   var idUsuario = req.params.idUsuario;
 
-  aquarioModel.buscarAquariosPorEmpresa(idUsuario).then((resultado) => {
+  musicModel.buscarmusicsPorEmpresa(idUsuario).then((resultado) => {
     if (resultado.length > 0) {
       res.status(200).json(resultado);
     } else {
@@ -11,7 +11,7 @@ function buscarAquariosPorEmpresa(req, res) {
     }
   }).catch(function (erro) {
     console.log(erro);
-    console.log("Houve um erro ao buscar os aquarios: ", erro.sqlMessage);
+    console.log("Houve um erro ao buscar os musics: ", erro.sqlMessage);
     res.status(500).json(erro.sqlMessage);
   });
 }
@@ -34,7 +34,7 @@ function comentar(req, res) {
   }else {
 
 
-    aquarioModel.comentar(texto, idUsuario, avaliacao, idTraducao)
+    musicModel.comentar(texto, idUsuario, avaliacao, idTraducao)
       .then((resultado) => {
         res.status(201).json(resultado);
       }
@@ -51,7 +51,7 @@ function comentar(req, res) {
 
 
 function buscarMusicas(req, res) {
-  aquarioModel.buscarMusicas().then((resultado) => {
+  musicModel.buscarMusicas().then((resultado) => {
     if (resultado.length > 0) {
       console.log(resultado);
       res.status(200).json(resultado);
@@ -68,7 +68,7 @@ function buscarMusicas(req, res) {
 function buscarLetraMusica(req, res) {
   var idMusica = req.params.idMusica;
   console.log(idMusica,'ID do contoller')
-  aquarioModel.buscarMusicaPorID(idMusica).then((resultado) => {
+  musicModel.buscarMusicaPorID(idMusica).then((resultado) => {
     if (resultado.length > 0) {
       console.log(resultado);
       res.status(200).json(resultado);
@@ -85,7 +85,7 @@ function buscarLetraMusica(req, res) {
 function buscaComentarioPorMusica(req, res) {
   var idMusica = req.params.idMusica;
   console.log(idMusica,'ID do contoller')
-  aquarioModel.buscaComentarioPorMusica(idMusica).then((resultado) => {
+  musicModel.buscaComentarioPorMusica(idMusica).then((resultado) => {
     if (resultado.length > 0) {
       console.log(resultado);
       res.status(200).json(resultado);
@@ -101,7 +101,7 @@ function buscaComentarioPorMusica(req, res) {
 
 
 module.exports = {
-  buscarAquariosPorEmpresa,
+  buscarmusicsPorEmpresa,
   comentar,
   buscarMusicas,
   buscarLetraMusica,

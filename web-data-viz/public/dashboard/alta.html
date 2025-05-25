@@ -99,10 +99,10 @@
 
 	function exibirGrafico() {
 
-		// var aquarios = JSON.parse(sessionStorage.AQUARIOS);
-		// aquarios.forEach(item => {
-		//     document.getElementById("btnAquario").innerHTML += `
-		//     <button class="btn-chart" onclick="exibirAquario(${item.id})" id="btnAquario${item.id}">${item.descricao}</button>
+		// var musics = JSON.parse(sessionStorage.musics);
+		// musics.forEach(item => {
+		//     document.getElementById("btnmusic").innerHTML += `
+		//     <button class="btn-chart" onclick="exibirmusic(${item.id})" id="btnmusic${item.id}">${item.descricao}</button>
 		//     `
 
 		document.getElementById("graficos").innerHTML += `
@@ -232,7 +232,7 @@
 			if (response.ok) {
 				response.json().then(function (novoRegistro) {
 
-					// alertar(novoRegistro, idAquario);
+					// alertar(novoRegistro, idmusic);
 					console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
 					console.log(novoRegistro)
 					console.log(`Dados atuais do gráfico:`);

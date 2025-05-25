@@ -1,22 +1,22 @@
 var express = require("express");
 var router = express.Router();
 
-var aquarioController = require("../controllers/aquarioController");
+var musicController = require("../controllers/musicController");
 
 router.get("/musicas", function (req, res) {
-  aquarioController.buscarMusicas(req, res);
+  musicController.buscarMusicas(req, res);
 });
 
 router.get("/letra/:idMusica", function (req, res) {
-  aquarioController.buscarLetraMusica(req, res);
+  musicController.buscarLetraMusica(req, res);
 });
 
 router.get("/comentarios/:idMusica", function (req, res) {
-  aquarioController.buscaComentarioPorMusica(req, res);
+  musicController.buscaComentarioPorMusica(req, res);
 });
 
 router.post("/musicas/comentar/:idUsuario", function (req, res) {
-  aquarioController.comentar(req, res);
+  musicController.comentar(req, res);
 })
 
 module.exports = router;

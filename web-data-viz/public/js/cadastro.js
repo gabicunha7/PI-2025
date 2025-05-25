@@ -23,7 +23,23 @@
 
       finalizarAguardar();
       return false;
-    } else {
+
+    } else if(!emailVar.includes('@') || !emailVar.includes('.')){
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "O email precisa tem '@' e '.'";
+
+      finalizarAguardar();
+      return false;
+
+    } else if(senhaVar.length < 6){
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "A senha precisa ter pelo menos 6 caracteres";
+      finalizarAguardar();
+      return false;
+    }
+    else {
       setInterval(sumirMensagem, 5000);
     }
 

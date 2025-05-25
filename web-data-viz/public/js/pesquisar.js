@@ -1,7 +1,7 @@
 
 function listarMusicas() {
 	let listaMusicas = [];
-	fetch(`/aquarios/musicas/`, {
+	fetch(`/musics/musicas/`, {
 		method: "GET"
 	})
 		.then(function (resposta) {
