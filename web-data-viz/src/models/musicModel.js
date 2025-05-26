@@ -31,7 +31,7 @@ function buscarMusicas() {
 
 function buscarMusicaPorID(idMusica) {
   console.log(idMusica, 'ID do model')
-  var instrucaoSql = `select m.artista, m.nome, m.letra, t.letra_trad
+  var instrucaoSql = `select m.artista, m.nome, m.letra, t.letra_trad, m.urlYtb
                       from musica m
                       inner join traducao t
                           on m.id = t.fkmusica

@@ -46,7 +46,7 @@ function exibirLetraMusica() {
 
           titulo.innerHTML = listaDadosBanco[0].nome;
           artista.innerHTML = listaDadosBanco[0].artista;
-
+          video_youtube.innerHTML = `<iframe width="560" height="315" src="${listaDadosBanco[0].urlYtb}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 
         });
       });

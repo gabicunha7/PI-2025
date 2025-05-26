@@ -176,3 +176,8 @@ body {
 	font-size: 20px;
 	font-weight: 500;
 }
+
+#video_youtube {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
