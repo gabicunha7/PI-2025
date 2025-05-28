@@ -10,6 +10,11 @@ function entrar() {
 		mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 		finalizarAguardar();
 		return false;
+	} else if (emailVar.includes("'") || senhaVar.includes("'")){
+		cardErro.style.display = "block"
+		mensagem_erro.innerHTML = "campos não podem conter '";
+		finalizarAguardar();
+		return false;
 	}
 	else {
 		setInterval(sumirMensagem, 5000)

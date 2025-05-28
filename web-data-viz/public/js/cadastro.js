@@ -32,6 +32,14 @@
       finalizarAguardar();
       return false;
 
+    } else if(emailVar.includes("'") || nomeVar.includes("'") || senhaVar.includes("'")){
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "Campos não podem conter ' aspas simples por motivos técnicos";
+
+      finalizarAguardar();
+      return false;
+
     } else if(senhaVar.length < 6){
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =

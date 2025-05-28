@@ -98,15 +98,17 @@ body{
 }
 
 .graficos {
-	height: 80vh;
+	display: flex;
+	justify-content: center;
+	height: 90vh;
 	width: 100%;
 	
 }
 
 #grafico {
-	margin: 6rem;
 	display: flex;
-	width: 50%;
+	height: 60vh;
+	margin-top: 3rem;
 }
 
 #myChartCanvas {
