@@ -8,12 +8,8 @@ function listarMusicas() {
 			resposta.json().then((musicas) => {
 				musicas.forEach((musica) => {
 					listaMusicas.push(musica);
-
-					console.log("listaMusicas");
-					console.log(listaMusicas);
 				});
 				for (let i = 0; i < listaMusicas.length; i++) {
-					console.log('listando uma musica');
 					document.getElementById("card_musicas").innerHTML += `
 		<div class="card" onclick="pegarID(${listaMusicas[i].id}, ${listaMusicas[i].tid})">
 			<div class="card_left">

@@ -17,13 +17,13 @@ function comentar(texto, idUsuario, avaliacao, idTraducao) {
 }
 
 function buscarMusicas() {
-  var instrucaoSql = `select m.id, m.nome, m.artista, round(avg(c.avaliacao), 1) as avaliacao, t.id as tid
+  var instrucaoSql = `select m.id, m.nome, m.artista, case when round(avg(c.avaliacao), 1) is not null then round(avg(c.avaliacao), 1) else 0 end as avaliacao, t.id as tid
                       from musica m
                       inner join traducao t
                           on m.id = t.fkmusica
-                      inner join comentario c 
+                      left join comentario c 
                           on t.id = c.fktraducao
-                      group by m.id, m.nome, m.artista;`;
+                      group by m.id, m.nome, m.artista, t.id;`;
 
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
   return database.executar(instrucaoSql);
@@ -43,7 +43,7 @@ function buscarMusicaPorID(idMusica) {
 
 function buscaComentarioPorMusica(idMusica) {
   console.log(idMusica, 'ID do model')
-  var instrucaoSql = `select u.nome, c.avaliacao, c.texto, c.id
+  var instrucaoSql = `select u.nome, c.avaliacao, c.texto, c.id, u.id as Uid
                         from comentario c 
                         inner join usuario u
                             on c.fkusuario = u.id
@@ -57,7 +57,12 @@ function buscaComentarioPorMusica(idMusica) {
   return database.executar(instrucaoSql);
 }
 
+function deletar(idComentario) {
+  var instrucaoSql = `DELETE FROM comentario WHERE id = ${idComentario}`;
 
+  console.log("Executando a instrução SQL: \n" + instrucaoSql);
+  return database.executar(instrucaoSql);
+}
 
 
 
@@ -66,6 +71,7 @@ module.exports = {
   comentar,
   buscarMusicas,
   buscarMusicaPorID,
-  buscaComentarioPorMusica
+  buscaComentarioPorMusica,
+  deletar
 
 }

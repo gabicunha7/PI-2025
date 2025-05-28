@@ -181,3 +181,15 @@ body {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 }
+
+.deletar {
+	width: 25px;
+	color: red;
+	cursor: pointer;
+}
+
+#baixo_comentario{
+	display: flex;
+	justify-content: space-between;
+
+}

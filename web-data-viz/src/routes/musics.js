@@ -19,4 +19,8 @@ router.post("/musicas/comentar/:idUsuario", function (req, res) {
   musicController.comentar(req, res);
 })
 
+router.delete("/musicas/deletar/:idComentario", function (req, res) {
+  musicController.deletar(req, res);
+})
+
 module.exports = router;

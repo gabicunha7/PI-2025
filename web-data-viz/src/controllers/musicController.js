@@ -17,6 +17,24 @@ function buscarmusicsPorEmpresa(req, res) {
 }
 
 
+function deletar(req, res) {
+  let idComentario = req.params.idComentario;
+
+  musicModel.deletar(idComentario)
+    .then((resultado) => {
+      res.status(201).json(resultado);
+    }
+    ).catch((erro) => {
+      console.log(erro);
+      console.log(
+        "\nHouve um erro ao deletar o comentario! Erro: ",
+        erro.sqlMessage
+      );
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
+
 function comentar(req, res) {
   var texto = req.body.texto;
   var idUsuario = req.params.idUsuario;
@@ -29,9 +47,9 @@ function comentar(req, res) {
     res.status(400).send("avaliacao está undefined!");
   } else if (idUsuario == undefined) {
     res.status(400).send("idUsuario está undefined!");
-  }else if (idTraducao == undefined) {
+  } else if (idTraducao == undefined) {
     res.status(400).send("idTraducao está undefined!");
-  }else {
+  } else {
 
 
     musicModel.comentar(texto, idUsuario, avaliacao, idTraducao)
@@ -67,7 +85,7 @@ function buscarMusicas(req, res) {
 
 function buscarLetraMusica(req, res) {
   var idMusica = req.params.idMusica;
-  console.log(idMusica,'ID do contoller')
+  console.log(idMusica, 'ID do contoller')
   musicModel.buscarMusicaPorID(idMusica).then((resultado) => {
     if (resultado.length > 0) {
       console.log(resultado);
@@ -84,7 +102,7 @@ function buscarLetraMusica(req, res) {
 
 function buscaComentarioPorMusica(req, res) {
   var idMusica = req.params.idMusica;
-  console.log(idMusica,'ID do contoller')
+  console.log(idMusica, 'ID do contoller')
   musicModel.buscaComentarioPorMusica(idMusica).then((resultado) => {
     if (resultado.length > 0) {
       console.log(resultado);
@@ -105,5 +123,6 @@ module.exports = {
   comentar,
   buscarMusicas,
   buscarLetraMusica,
-  buscaComentarioPorMusica
+  buscaComentarioPorMusica,
+  deletar
 }
