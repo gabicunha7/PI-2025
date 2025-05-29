@@ -1,6 +1,7 @@
 
 function listarMusicas() {
 	let listaMusicas = [];
+	let frase = ``;
 	fetch(`/musics/musicas/`, {
 		method: "GET"
 	})
@@ -10,7 +11,7 @@ function listarMusicas() {
 					listaMusicas.push(musica);
 				});
 				for (let i = 0; i < listaMusicas.length; i++) {
-					document.getElementById("card_musicas").innerHTML += `
+					frase += `
 		<div class="card" onclick="pegarID(${listaMusicas[i].id}, ${listaMusicas[i].tid})">
 			<div class="card_left">
 				<a href="musica.html">${listaMusicas[i].nome}</a>
@@ -25,6 +26,8 @@ function listarMusicas() {
 			</div>
 		</div>`
 				}
+
+				document.getElementById("card_musicas").innerHTML = frase;
 			});
 		})
 		.catch(function (resposta) {

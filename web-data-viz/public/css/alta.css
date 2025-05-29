@@ -46,7 +46,7 @@
 	width: 80%;
 }
 
-.escrever input::placeholder{
+.escrever input::placeholder {
 	color: var(--amarelo-claro);
 }
 
@@ -62,16 +62,17 @@
 	height: 3rem;
 	width: 20%;
 }
-.escrever button:hover{
+
+.escrever button:hover {
 	background-color: #fa702bdb;
 	transition: 0.5s;
 }
 
-body{
+body {
 	background-color: var(--azul-escuro);
 }
 
-.content{
+.content {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -99,10 +100,13 @@ body{
 
 .graficos {
 	display: flex;
-	justify-content: center;
-	height: 90vh;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	height: fit-content;
+	margin-bottom: 6rem;
 	width: 100%;
-	
+
 }
 
 #grafico {
@@ -114,4 +118,19 @@ body{
 #myChartCanvas {
 	width: 100%;
 	height: 100%;
+}
+
+#myChartCanvasBarra {
+	width: 100%;
+	height: 100%;
+}
+
+@media(max-width: 800px) {
+	.graficos {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+
+	}
 }

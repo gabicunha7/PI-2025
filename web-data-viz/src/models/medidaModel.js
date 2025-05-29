@@ -1,29 +1,13 @@
 var database = require("../database/config");
 
-function buscarUltimasMedidas(idmusic, limite_linhas) {
+function buscarGraficoBarra() {
 
-    var instrucaoSql = `SELECT 
-        dht11_temperatura as temperatura, 
-        dht11_umidade as umidade,
-                        momento,
-                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico
-                    FROM medida
-                    WHERE fk_music = ${idmusic}
-                    ORDER BY id DESC LIMIT ${limite_linhas}`;
-
-    console.log("Executando a instrução SQL: \n" + instrucaoSql);
-    return database.executar(instrucaoSql);
-}
-
-function buscarMedidasEmTempoRealmusic(idmusic) {
-
-    var instrucaoSql = `SELECT 
-        dht11_temperatura as temperatura, 
-        dht11_umidade as umidade,
-                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico, 
-                        fk_music 
-                        FROM medida WHERE fk_music = ${idmusic} 
-                    ORDER BY id DESC LIMIT 1`;
+    var instrucaoSql = `select u.nome, count(c.id) contagem
+                        from usuario u
+                        inner join comentario c
+                                on u.id = c.fkusuario
+                        group by u.nome
+                        order by count(c.id) desc limit 3;`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -82,23 +66,11 @@ function buscarGraficoPizza() {
     return database.executar(instrucaoSql);
 }
 
-function buscarMedidasEmTempoReal() {
-
-    var instrucaoSql = `select u.genfav genfav, count(genfav) quantidade
-                        from usuario u
-                        group by u.genfav;`;
-
-    console.log("Executando a instrução SQL: \n" + instrucaoSql);
-    return database.executar(instrucaoSql);
-}
-
-
 
 module.exports = {
-    buscarUltimasMedidas,
-    buscarMedidasEmTempoReal,
     musicaMaisComentada,
     musicaMelhorAvaliada,
     usuarioMaisComenta,
-    buscarGraficoPizza
+    buscarGraficoPizza,
+    buscarGraficoBarra
 }

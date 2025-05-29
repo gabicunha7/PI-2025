@@ -3,11 +3,6 @@ var router = express.Router();
 
 var medidaController = require("../controllers/medidaController");
 
-router.get("/ultimas", function (req, res) {
-    medidaController.buscarUltimasMedidas(req, res);
-});
-
-
 router.get("/musmaiscom", function (req, res) {
     medidaController.buscarMusicaMaisComentada(req, res);
 });
@@ -21,11 +16,11 @@ router.get("/musmelhorava", function (req, res) {
 });
 
 router.get("/pizza", function (req, res) {
-    medidaController.buscarUltimasMedidas(req, res);
+    medidaController.buscarGraficoPizza(req, res);
 });
 
-router.get("/tempo-real/:idmusic", function (req, res) {
-    medidaController.buscarMedidasEmTempoReal(req, res);
-})
+router.get("/barra", function (req, res) {
+    medidaController.buscarGraficoBarra(req, res);
+});
 
 module.exports = router;

@@ -1,6 +1,6 @@
 var medidaModel = require("../models/medidaModel");
 
-function buscarUltimasMedidas(req, res) {
+function buscarGraficoPizza(req, res) {
 
     medidaModel.buscarGraficoPizza().then(function (resultado) {
         if (resultado.length > 0) {
@@ -60,14 +60,9 @@ function buscarMusicaMaisComentada(req, res) {
     });
 }
 
+function buscarGraficoBarra(req, res) {
 
-function buscarMedidasEmTempoReal(req, res) {
-
-    var idmusic = req.params.idmusic;
-
-    console.log(`Recuperando medidas em tempo real`);
-
-    medidaModel.buscarMedidasEmTempoReal(idmusic).then(function (resultado) {
+    medidaModel.buscarGraficoBarra().then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
@@ -80,10 +75,12 @@ function buscarMedidasEmTempoReal(req, res) {
     });
 }
 
+
+
 module.exports = {
-    buscarUltimasMedidas,
-    buscarMedidasEmTempoReal,
+    buscarGraficoPizza,
     buscarUsuarioMaisComenta,
     buscarMusicaMelhorAvaliada,
-    buscarMusicaMaisComentada
+    buscarMusicaMaisComentada,
+    buscarGraficoBarra
 }

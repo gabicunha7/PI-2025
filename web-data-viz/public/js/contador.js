@@ -22,6 +22,8 @@ let listaDadosBanco = [];
 let listaComentarios = [];
 
 function exibirLetraMusica() {
+  let letraOriginal = ``;
+  let letraTraduzida = ``;
   let idMusica = sessionStorage.getItem("ID_MUSICA")
   fetch(`/musics/letra/${idMusica}`, {
     method: "GET",
@@ -38,15 +40,19 @@ function exibirLetraMusica() {
           for (let i = 0; i < letraMusica.length; i++) {
             trechos.push(letraMusica[i]);
             trechosTrad.push(letraMusicaTrad[i]);
-            letra_musica.innerHTML += `<p class="original" lang="en">${trechos[i]}</p>`;
-            letra_traducao.innerHTML += `<p class="traducao" lang="en">${trechosTrad[i]}</p>`;
+            letraOriginal += `<p class="original" lang="en">${trechos[i]}</p>`;
+            letraTraduzida  += `<p class="traducao" lang="en">${trechosTrad[i]}</p>`;
           }
-
+        
+          letra_musica.innerHTML = letraOriginal;
+          letra_traducao.innerHTML = letraTraduzida;
           titulo.innerHTML = listaDadosBanco[0].nome;
           artista.innerHTML = listaDadosBanco[0].artista;
           video_youtube.innerHTML = `<iframe width="560" height="315" src="${listaDadosBanco[0].urlYtb}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 
+
         });
+
       });
     })
     .catch(function (resposta) {
@@ -55,6 +61,7 @@ function exibirLetraMusica() {
 }
 
 function buscarComentarioPeloId() {
+  let frase = ``;
   let idMusica = sessionStorage.getItem("ID_MUSICA")
   fetch(`/musics/comentarios/${idMusica}`, {
     method: "GET"
@@ -65,7 +72,7 @@ function buscarComentarioPeloId() {
           listaComentarios.push(comentario);
         });
         for (let i = 0; i < listaComentarios.length; i++) {
-          caixa_comentarios.innerHTML += `<div id="comentario" class="comentario">
+          frase += `<div id="comentario" class="comentario">
             <div id="sobre_user">
               <h1>${listaComentarios[i].nome}</h1>
               <p>${listaComentarios[i].avaliacao}
@@ -83,6 +90,7 @@ function buscarComentarioPeloId() {
             </div>
           </div>`
         }
+        caixa_comentarios.innerHTML = frase;
       });
     })
     .catch(function (resposta) {

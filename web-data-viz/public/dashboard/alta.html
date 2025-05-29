@@ -65,8 +65,7 @@
 			<h3>Contato</h3>
 			<p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
 					class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-					<path
-						d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+					<path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
 				</svg>Rua Doutor tosta, 79</p>
 			<p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
 					class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
@@ -109,19 +108,17 @@
                 <div id="grafico" class="display-none">
                         <canvas id="myChartCanvas"></canvas>
                 </div>
+				   <div id="grafico" class="display-none">
+                        <canvas id="myChartCanvasBarra"></canvas>
+                </div>
             `;
 		obterDadosGrafico();
-
+		obterDadosGraficoBarra();
 
 		//        \\ });
 	}
 
 	function obterDadosGrafico() {
-		let proximaAtualizacao;
-
-		if (proximaAtualizacao != undefined) {
-			clearTimeout(proximaAtualizacao);
-		}
 
 		fetch(`/medidas/pizza`, { cache: 'no-store' }).then(function (response) {
 			if (response.ok) {
@@ -140,6 +137,101 @@
 				console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
 			});
 	}
+
+	function obterDadosGraficoBarra() {
+
+		fetch(`/medidas/barra`, { cache: 'no-store' }).then(function (response) {
+			if (response.ok) {
+				response.json().then(function (resposta) {
+					console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+					resposta.reverse();
+
+					plotarGraficoBarra(resposta);
+
+				});
+			} else {
+				console.error('Nenhum dado encontrado ou erro na API');
+			}
+		})
+			.catch(function (error) {
+				console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+			});
+	}
+
+
+	function plotarGraficoBarra(resposta) {
+
+		let labels = [];
+
+		let dados = {
+			labels: labels,
+			datasets: [{
+				data: [],
+				backgroundColor: [
+					'#f76014',
+					'#f8bf2d',
+					'#8e9797',
+				]
+			}]
+		};
+
+		let opcoes = {
+			responsive: true,
+			plugins: {
+				legend: {
+					display: false,
+				},	
+				title: {
+					display: true,
+					text: 'Top 3 usuários que mais comentam e as quantidades',
+					color: '#fff',
+					font: {
+						size: 25
+					}
+				}
+			},
+			indexAxis: 'y',
+			scales: {
+				x: {
+					ticks: {
+						color: '#fff',
+						font: {
+							size: 20,
+						}
+					}
+				},
+				y: {
+					ticks: {
+						color: '#fff',
+						font: {
+							size: 20,
+						}
+					}
+				}
+			}
+		};
+
+		for (i = 0; i < resposta.length; i++) {
+			var registro = resposta[i];
+			labels.push(registro.nome);
+			dados.datasets[0].data.push(registro.contagem);
+		}
+
+
+		const config = {
+			type: 'bar',
+			data: dados,
+			options: opcoes
+		};
+
+		let myChart = new Chart(
+			document.getElementById(`myChartCanvasBarra`),
+			config,
+		);
+
+	}
+
+
 
 	function plotarGrafico(resposta) {
 
@@ -222,60 +314,6 @@
 
 		// setTimeout(() => atualizarGrafico(dados, myChart), 20000);
 	}
-
-	// function atualizarGrafico(dados, myChart) {
-
-	// 	fetch(`/medidas/tempo-real`, { cache: 'no-store' }).then(function (response) {
-	// 		if (response.ok) {
-	// 			response.json().then(function (novoRegistro) {
-
-	// 				// alertar(novoRegistro, idmusic);
-	// 				console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
-	// 				console.log(novoRegistro)
-	// 				console.log(`Dados atuais do gráfico:`);
-	// 				console.log(dados);
-
-	// 				let avisoCaptura = document.getElementById(`avisoCaptura`)
-	// 				avisoCaptura.innerHTML = ""
-
-
-	// 				if (novoRegistro.quantidade == dados.datasets[0].data) {
-	// 					console.log("---------------------------------------------------------------")
-	// 					console.log("Como não há dados novos para captura, o gráfico não atualizará.")
-	// 					avisoCaptura.innerHTML = "<i class='fa-solid fa-triangle-exclamation'></i> Foi trazido o dado mais atual capturado pelo sensor. <br> Como não há dados novos a exibir, o gráfico não atualizará."
-	// 					console.log("Horário do novo dado capturado:")
-	// 					console.log(novoRegistro[0].genfav)
-	// 					console.log("Horário do último dado capturado:")
-	// 					console.log(dados.labels[dados.labels.length - 1])
-	// 					console.log("---------------------------------------------------------------")
-	// 				} else {
-	// 					// tirando e colocando valores no gráfico
-	// 					// dados.labels.shift(); // apagar o primeiro
-	// 					dados.labels.push(novoRegistro[0].genfav); // incluir um novo momento
-
-	// 					// dados.datasets[0].data.shift();  // apagar o primeiro de umidade
-	// 					dados.datasets[0].data.push(novoRegistro[0].quantidade); // incluir uma nova medida de umidade
-
-	// 					// dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
-	// 					// dados.datasets[1].data.push(novoRegistro[0].temperatura); // incluir uma nova medida de temperatura
-
-	// 					myChart.update();
-	// 				}
-
-	// 				// Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-	// 				proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, myChart), 2000);
-	// 			});
-	// 		} else {
-	// 			console.error('Nenhum dado encontrado ou erro na API');
-	// 			// Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-	// 			proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, myChart), 2000);
-	// 		}
-	// 	})
-	// 		.catch(function (error) {
-	// 			console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-	// 		});
-
-	// }
 
 	function exibirKpis() {
 		console.log('exibir kpis')
