@@ -18,13 +18,13 @@
 
 ## Protótipo
 - Página Inicial
-![Página Home](Prototipo/prototipo_home.png)
+![Página Home](design/index.png)
 
 - Página de Login
-![Página de Login](Prototipo/prototipo_login.png)
+![Página de Login]("design/login.png")
 
 - Página de Cadastro
-![Página de Cadastro](Prototipo/prototipo_cadastro.png)
+![Página de Cadastro](design/cadastro.png)
 
 ## Tecnologias Utilizadas
 1. [Canva](https://www.canva.com/pt_br/)
@@ -35,7 +35,6 @@
 
 ## Autora
 - Gabriela Pinheiro Lopes da Cunha, 
-
 
 ## Próximos Passos
 - [ ] Expandir a quantidade de músicas.
