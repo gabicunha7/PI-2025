@@ -21,7 +21,7 @@
 ![Página Home](design/index.png)
 
 - Página de Login
-![Página de Login]("design/login.png")
+![Página de Login](design/login.png)
 
 - Página de Cadastro
 ![Página de Cadastro](design/cadastro.png)
