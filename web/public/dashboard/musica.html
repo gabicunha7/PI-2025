@@ -43,16 +43,18 @@
 		</section>
 
 		<form class="sessao_comentarios" id="sessao_comentarios">
-			<ul class="avaliar">
-				<li class="star-icon ativo" data-avaliar="1"></li>
-				<li class="star-icon" data-avaliar="2"></li>
-				<li class="star-icon" data-avaliar="3"></li>
-				<li class="star-icon" data-avaliar="4"></li>
-				<li class="star-icon" data-avaliar="5"></li>
+			<div class="estrelas">
+				<ul class="avaliar">
+					<li class="star-icon ativo" data-avaliar="1"></li>
+					<li class="star-icon" data-avaliar="2"></li>
+					<li class="star-icon" data-avaliar="3"></li>
+					<li class="star-icon" data-avaliar="4"></li>
+					<li class="star-icon" data-avaliar="5"></li>
 
-			</ul>
-			<input type="text" placeholder="Faça seu comentário: " class="ipt_comentario" id="ipt_comentario" maxlength="50">
-			<button onclick="comentar()">Enviar</button>
+				</ul>
+			</div>
+			<div class="inserir_comentario"><input type="text" placeholder="Faça seu comentário: " class="ipt_comentario" id="ipt_comentario" maxlength="50">
+			<button onclick="comentar()">Enviar</button></div>
 			<div id="caixa_comentarios" class="comentarios">
 				
 			</div>

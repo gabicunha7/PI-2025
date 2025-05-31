@@ -60,8 +60,8 @@
 	font-weight: 700;
 }
 
-.form a{
-color: var(--amarelo-escuro);
+.form a {
+	color: var(--amarelo-escuro);
 	text-decoration: none;
 }
 
@@ -85,47 +85,46 @@ color: var(--amarelo-escuro);
 
 
 /*web dat viz*/
-
-.loading-div {
-	width: 100%;
-	height: 100%;
-	background-color: #000a581f;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: auto;
-	display: none;
-      }
-      
-.loading-div img {
-	height: 50px;
-	width: 50px;
+#section_aguardar img {
+	width: 6rem;
+	height: fit-content;
+	position: relative;
 }
 
-#div_erros_login {
-	display: none
+#section_aguardar .borda_aguardar {
+	position: absolute;
+	width: 7rem;
+	height: 7rem;
+	border-radius: 50%;
+	border: 0.2rem solid var(--amarelo-claro);
+	border-top-color: var(--azul);
+	animation: linear infinite 1s aguardar;
 }
 
-.alerta_erro{
-	display: flex;
-	justify-content: flex-end;
-      }
-      
-.card_erro {
+@keyframes aguardar {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+#section_aguardar {
 	display: none;
-	background-color: #fff;
-	color: black;
-	width: 230px;
 	position: fixed;
-	border-radius: 4px;
-	border: #ED145B 3px solid;
-	padding: 10px;
-	margin-right: 10%;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.379);
+	justify-content: center;
+	align-items: center;
 }
-      
-.card_erro #mensagem_erro{
-	font-weight: 500;
-	font-size: 20px;
+
+#section_erros_login {
+	display: none;
+	position: fixed;
+	left: 1rem;
+	bottom: 1rem;
+	background-color: var(--azul);
+	color: var(--amarelo-claro);
+	padding: 2rem;
 }
-      
-      

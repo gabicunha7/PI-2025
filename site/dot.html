@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dot</title>
+</head>
+
+<style>
+
+	.dot {
+		background-color: blue;
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		margin: 0rem 0.5rem;
+		animation: dancing 1.2s infinite ease-in-out;
+		animation-delay: calc(0.5s);
+	}
+
+	.dot:nth-child(2) {
+		animation-delay: 0.75s;
+	}
+
+	.dot:nth-child(3) {
+		animation-delay: 1s;
+	}
+
+	@keyframes dancing {
+		0% {
+			transform: scale(1);
+		}
+
+		50% {
+			transform: scale(1.5);
+		}
+
+		100% {
+			transform: scale(1);
+		}
+	}
+
+	.loading {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+		background-color: black;
+		width: fit-content;
+		position: relative;
+		padding: 2rem;
+		border-radius: 10px;
+	}
+
+	#section_aguardar {
+		/* display: none; */
+		display: flex;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100vw;
+		background-color: rgba(0, 0, 0, 0.379);
+		justify-content: center;
+		align-items: center;
+
+	}
+</style>
+
+<body>
+	<section class="aguardar" id="section_aguardar">
+		<div class="loading">
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+		</div>
+	</section>
+
+</body>
+
+
+</html>

@@ -16,34 +16,37 @@ body {
 .conteudo {
 	display: flex;
 	flex-direction: row;
-	grid-template-columns: 1fr 1fr; /* duas colunas de larguras iguais */
-	gap: 0.5em;   
+	grid-template-columns: 1fr 1fr;
+	/* duas colunas de larguras iguais */
+	gap: 0.5em;
 }
 
-.LetraMusica{
+.LetraMusica {
 	width: 50%;
 
 }
 
-.TraduçãoMusica{
+.TraduçãoMusica {
 	width: 50%;
 
 }
 
 .original {
 	color: var(--azul);
-	font-size: 20px;        
-	text-align: center;         
+	font-size: 20px;
+	text-align: center;
 }
+
 .original:hover {
 	background-color: #1d110b23;
 }
 
 .traducao {
 	color: var(--azul);
-	font-size: 20px;         
-	text-align: center;         
+	font-size: 20px;
+	text-align: center;
 }
+
 .traducao:hover {
 	background-color: #1d110b23;
 }
@@ -68,8 +71,16 @@ body {
 }
 
 .sessao_comentarios {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 	margin-top: 5rem;
 	margin-bottom: 5rem;
+}
+
+.estrelas {
+	display: flex;
+	justify-content: center;
 }
 
 .avaliar {
@@ -91,32 +102,40 @@ body {
 	content: "\2605";
 }
 
-.star-icon.ativo ~ .star-icon::before{
+.star-icon.ativo~.star-icon::before {
 	content: "\2606";
 }
 
-.star-icon:hover ~ .star-icon::before{
+.star-icon:hover~.star-icon::before {
 	transition: 3s;
 	content: "\2606";
 }
 
-.avaliar:hover .star-icon::before{
+.avaliar:hover .star-icon::before {
 	transition: 3s;
 	content: "\2605";
 }
 
+.inserir_comentario {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	gap: 1rem;
+}
+
 .ipt_comentario {
-	width: 50%;
+	width: 70%;
 	height: 3rem;
 	font-size: 20px;
-	text-align: center;
 	border-radius: 5px;
+	padding: 0.3rem;
 	border: none;
 	color: var(--amarelo-claro);
 	background-color: var(--azul);
+	padding-left: 2rem;
 }
 
-.ipt_comentario::placeholder{
+.ipt_comentario::placeholder {
 	color: var(--amarelo-claro);
 }
 
@@ -137,16 +156,21 @@ body {
 }
 
 .comentarios {
-	width: 1005;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
 	height: fit-content;
 	margin-bottom: 4rem;
+	margin-top: 4rem;
+	gap: 1rem;
 }
+
 .comentario {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
-	margin-top: 2rem;
-	padding: 1rem;
+	padding: 1.5rem;
 	background-color: #fff4b79f;
 	width: 80%;
 	border-radius: 15px;
@@ -188,7 +212,7 @@ body {
 	cursor: pointer;
 }
 
-#baixo_comentario{
+#baixo_comentario {
 	display: flex;
 	justify-content: space-between;
 
