@@ -56,8 +56,10 @@ function cadastrar() {
 
       if (resposta.ok) {
         var sectionErrosLogin = document.getElementById("section_erros_login");
-        sectionErrosLogin.style.backgroundColor = '#f8bf2d';
+        sectionErrosLogin.innerHTML = 'Cadastro realizado com sucesso!'
+        sectionErrosLogin.style.backgroundColor = '#FFF4B7';
         sectionErrosLogin.style.color = '#000000';
+        sectionErrosLogin.style.display = 'flex';
 
         setTimeout(() => {
           window.location = "login.html";

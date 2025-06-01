@@ -142,8 +142,8 @@ function comentar() {
       console.log("resposta: ", resposta);
 
       if (resposta.ok) {
-        // window.location = "/dashboard/musica.html";
         alert('Comentário realizado com sucesso!');
+        //window.location = "/dashboard/musica.html";
         return false;
 
       } else if (resposta.status == 404) {
@@ -200,8 +200,8 @@ function deletar(idComentario) {
         }).then(function (resposta) {
 
             if (resposta.ok) {
+              alert('Comentário deletado com sucesso.'); // queria que ficasse mais tempo
                 window.location = "/dashboard/musica.html";
-                finalizarAguardar('Comentário deletado com sucesso.') // queria que ficasse mais tempo
             } else if (resposta.status == 404) {
                 window.alert("Deu 404!");
             } else {
