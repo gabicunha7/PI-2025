@@ -2,12 +2,14 @@ var database = require("../database/config");
 
 function buscarGraficoBarra() {
 
-    var instrucaoSql = `select u.nome, count(c.id) contagem
-                        from usuario u
-                        inner join comentario c
-                                on u.id = c.fkusuario
-                        group by u.nome
-                        order by count(c.id) desc limit 3;`;
+    var instrucaoSql = `select m.nome,  case when round(avg(c.avaliacao), 1) is not null then round(avg(c.avaliacao), 1) else 0 end as avaliacao
+                        from musica m
+                        inner join traducao t
+                                on m.id = t.fkmusica
+                        left join comentario c 
+                                on t.id = c.fktraducao
+                        group by m.nome
+                        order by avaliacao desc limit 3;`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

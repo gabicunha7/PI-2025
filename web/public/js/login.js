@@ -6,14 +6,13 @@ function entrar() {
 	var senhaVar = ipt_senha.value;
 
 	if (emailVar == "" || senhaVar == "") {
-		cardErro.style.display = "block"
-		mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-		finalizarAguardar();
+		finalizarAguardar("Mensagem de erro para todos os campos em branco");
 		return false;
-	} else if (emailVar.includes("'") || senhaVar.includes("'")){
-		cardErro.style.display = "block"
-		mensagem_erro.innerHTML = "campos não podem conter '";
-		finalizarAguardar();
+	} else if (emailVar.includes("'") || senhaVar.includes("'")) {
+		finalizarAguardar("Campos não podem conter '");
+		return false;
+	} else if (senhaVar.length < 6) {
+		finalizarAguardar("A senha precisa ter pelo menos 6 caracteres");
 		return false;
 	}
 	else {

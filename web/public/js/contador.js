@@ -22,6 +22,7 @@ let listaDadosBanco = [];
 let listaComentarios = [];
 
 function exibirLetraMusica() {
+  aguardar();
   let letraOriginal = ``;
   let letraTraduzida = ``;
   let idMusica = sessionStorage.getItem("ID_MUSICA")
@@ -49,7 +50,7 @@ function exibirLetraMusica() {
           titulo.innerHTML = listaDadosBanco[0].nome;
           artista.innerHTML = listaDadosBanco[0].artista;
           video_youtube.innerHTML = `<iframe width="560" height="315" src="${listaDadosBanco[0].urlYtb}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
-
+          finalizarAguardar();
 
         });
 
@@ -142,8 +143,7 @@ function comentar() {
 
       if (resposta.ok) {
         // window.location = "/dashboard/musica.html";
-        limparFormulario();
-        buscarComentarioPeloId();
+        alert('Comentário realizado com sucesso!');
         return false;
 
       } else if (resposta.status == 404) {
@@ -157,7 +157,8 @@ function comentar() {
 
     return false;
   } else {
-    return alert('Preencha o comentário.')
+    return alert('Preencha o comentário para poder comentar.');
+    // return section_erros_login.innerHTML = ``;
   }
 
 }
@@ -188,10 +189,8 @@ function pegarIDcomentario(idComentario, idUsuarioComentario) {
   deletar(idComentario, idUsuarioComentario);
 }
 
-function deletar(idComentario, idUsuarioComentario) {
-  var idUsuario = sessionStorage.ID_USUARIO;
+function deletar(idComentario) {
 
-  if (idUsuario == idUsuarioComentario) {
         console.log("Criar função de apagar post escolhido - ID " + idComentario);
         fetch(`/musics/musicas/deletar/${idComentario}`, {
             method: "DELETE",
@@ -201,18 +200,17 @@ function deletar(idComentario, idUsuarioComentario) {
         }).then(function (resposta) {
 
             if (resposta.ok) {
-                window.location = "/dashboard/musica.html"
+                window.location = "/dashboard/musica.html";
+                finalizarAguardar('Comentário deletado com sucesso.') // queria que ficasse mais tempo
             } else if (resposta.status == 404) {
                 window.alert("Deu 404!");
             } else {
-                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+                throw ("Houve um erro ao tentar deletar! Código da resposta: " + resposta.status);
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
         });
-  } else {
-    alert('Você não pode deletar um comentario que não foi feito por você.')
-  }
+
 }
 
 

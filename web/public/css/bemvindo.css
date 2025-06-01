@@ -55,6 +55,7 @@
 	display: flex;
 	justify-content: start;
 	width: 70%;
+	cursor: pointer;
 }
 
 .card a {

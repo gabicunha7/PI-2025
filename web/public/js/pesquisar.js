@@ -1,5 +1,6 @@
 
 function listarMusicas() {
+	aguardar();
 	let listaMusicas = [];
 	let frase = ``;
 	fetch(`/musics/musicas/`, {
@@ -28,6 +29,7 @@ function listarMusicas() {
 				}
 
 				document.getElementById("card_musicas").innerHTML = frase;
+				finalizarAguardar();
 			});
 		})
 		.catch(function (resposta) {

@@ -34,7 +34,7 @@ function finalizarAguardar(texto) {
 
         setTimeout(() => {
             sectionErrosLogin.style.display = 'none';
-        }, 2000);
+        }, 5000);
     }
 }
 
