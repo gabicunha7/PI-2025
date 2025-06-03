@@ -1,5 +1,5 @@
 # LearnTot
-![OilSense](web-data-viz/public/assets/imgs/logo.png)
+![OilSense](web/public/assets/imgs/logo.png)
 <p> Um projeto individual da SPTech, para a disciplina de PI - Projeto e Inovação. </p>
 
 ## Índice

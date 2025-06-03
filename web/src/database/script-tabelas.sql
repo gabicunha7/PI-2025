@@ -11,8 +11,8 @@ use learntot;
 
 create table usuario (
 id int primary key auto_increment,
-nome varchar(45) not null unique,
-email varchar(60) not null unique,
+nome varchar(45) not null,
+email varchar(60) not null,
 senha varchar(45) not null,
 genfav varchar(45) not null
 );
