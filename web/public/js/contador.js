@@ -17,7 +17,6 @@
 // 		</div>`
 //   });
 // }
-let valorEstrela = 1;
 let listaDadosBanco = [];
 let listaComentarios = [];
 
@@ -119,7 +118,15 @@ function buscarComentarioPeloId() {
     });
 }
 
+let valorEstrela = null;
+
 function comentar() {
+  
+  for(let e = 1; e <= 5; e++){
+    if(document.getElementById(`rad_avaliar${e}`).checked){
+      valorEstrela = document.getElementById(`rad_avaliar${e}`).value;
+    }
+  }
   var idUsuario = sessionStorage.ID_USUARIO;
 
   if (ipt_comentario.value != undefined && ipt_comentario.value != null && ipt_comentario.value != ''
@@ -157,7 +164,7 @@ function comentar() {
 
     return false;
   } else {
-    return alert('Preencha o comentário para poder comentar.');
+    return alert('Preencha o comentário e selecione uma nota de 1 a 5 para poder comentar.');
     // return section_erros_login.innerHTML = ``;
   }
 
@@ -167,21 +174,6 @@ function comentar() {
 function limparFormulario() {
   document.getElementById("sessao_comentarios").reset();
 }
-
-document.addEventListener('click', function (e) {
-  var estrelas = e.target.parentElement.getElementsByClassName('star-icon');
-  estrelas = Array.from(estrelas);
-  var classeEstrela = e.target.classList;
-
-  if (!classeEstrela.contains('ativo') && classeEstrela.contains('star-icon')) {
-    estrelas.forEach(function (estrela) {
-      estrela.classList.remove('ativo');
-    });
-    classeEstrela.add('ativo');
-    valorEstrela = e.target.getAttribute('data-avaliar');
-    console.log(e.target.getAttribute('data-avaliar'));
-  }
-})
 
 function pegarIDcomentario(idComentario, idUsuarioComentario) {
   sessionStorage.ID_COMENTARIO = idComentario;
